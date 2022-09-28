@@ -1,0 +1,83 @@
+/* font family  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+/* home page  */
+@import url("./sideBar.css");
+@import url("./homePage/authAndDate.css");
+@import url("./homePage/counts.css");
+@import url("./homePage/chart.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ui,
+.ui *,
+body,
+h1,
+h2,
+h3,
+h4,
+h5, p, span {
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+    --sideBar : #242d3d;
+    --dropDown : #141922;
+    --light-bg : #eff3f6;
+    --eye-color : #6ccc98;
+    --btn-color : #0792ef;
+    --btn-hover : #057bca;
+}
+
+.container{
+    display: flex;
+    position: relative;
+}
+
+.left-side{
+    z-index: 100000000;
+}
+
+.overFlow{
+    display: none;
+}
+
+.right-side{
+    flex: 4;
+}
+
+@media(max-width:885px){
+    .left-side{
+        width: 17rem;
+        position: fixed;
+        transform: translateX(-20rem);
+        transition: transform 400ms ease-in-out;
+    }
+
+    .left-side.active{
+        transform: translateX(0);
+    }
+
+    .ti-menu{
+        display: inline;
+        font-size: 1.4rem;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px 1px #000;
+        padding: 0.2rem;
+        z-index: 10000;
+    }
+
+    .overFlow.active{
+        display: inline;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.500);
+        z-index: 10000;
+    }
+}

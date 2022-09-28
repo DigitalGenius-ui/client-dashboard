@@ -1,0 +1,72 @@
+.chartData{
+    background-color: #fff;
+    padding: 2rem;
+    margin-top: 9.3rem;
+}
+
+.chartTime{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.timeTable .ui.form .field .ui.input input{
+    width: 10rem;
+    height: 3rem;
+}
+
+.chart .ui.form .fields .field .ui.input input{
+    width: 8rem;
+    height: 2.5rem;
+}
+
+.chartTime h1{
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+} 
+
+.showdata *{
+    font-family: 'Noto Sans TC', sans-serif !important;
+}
+.showdata td{
+    width: 50px;
+}
+
+.showdata tbody{
+    border: 1px solid #bdbdbd !important;
+}
+.showdata td{
+    padding: 0em !important;
+}
+.showdata td.label{
+    text-align: right;
+    color: rgb(39, 39, 179);
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+.linecut{
+    padding-left: 0 !important;
+}
+.linecut span{
+    background-color: white !important;
+    margin-left: -0.6em !important;
+    font-size: 0.8rem;
+}
+.linecutText{
+    padding-left: 0 !important;
+}
+
+.linecutText span{
+    background-color: white !important;
+    margin-left: -1.6em !important;
+    font-size: 0.8rem;
+}
+
+@media(max-width:770px){
+    .chartData{
+        margin-top: 0;
+    }
+
+    .showdata td{
+        width: 100%;
+    }
+}

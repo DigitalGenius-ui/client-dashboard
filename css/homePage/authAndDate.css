@@ -1,0 +1,85 @@
+.right-side{
+    background-color: var(--light-bg);
+}
+
+.right-side .auth{
+    background-color: #fff;
+    padding: 1rem ;
+    text-align: right;
+}
+
+.ti-menu{
+    display: none;
+}
+
+.auth .btn, .item{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.auth .item span{
+    margin-right: 1rem;
+}
+
+.content{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.details{
+    flex: 1.9;
+}
+
+.chart{
+    width: 25rem;
+}
+
+/* time part  */
+.timeTable{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.export{
+    padding: 0.8rem 0.9rem;
+    border: none;
+    background-color: var(--btn-color);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.export:hover{
+    background-color: var(--btn-hover);
+}
+
+@media(max-width:999px){
+    .timeTable{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media(max-width:885px){
+    .right-side .auth{
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width:770px){
+    .content{
+        flex-direction: column;
+    }
+
+    .chart{
+        width: 100%;
+    }
+}

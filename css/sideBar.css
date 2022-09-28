@@ -1,0 +1,119 @@
+.left-side .sideBar{
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    color: #fff;
+    width: 14rem;
+    background-color: var(--sideBar);
+}
+
+.sideBar .title{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.231);
+    padding: 1.5rem 1rem;
+    margin-bottom: 4rem;
+}
+
+.close{
+    display: none;
+}
+
+.title h1{
+    font-size: 1rem;
+}
+
+.dropDown {
+    padding: 0 0.8rem;
+}
+
+.dropDown .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    transition: 400ms ease-in-out;
+}
+
+.head h4{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.674);
+    transition: 400ms ease-in-out;
+}
+
+.head:hover{
+    background-color: var(--dropDown);
+    color: #fff;
+}
+
+.head.active{
+    background-color: var(--dropDown);
+    color: #fff;
+}
+
+.head:hover h4{
+    transform: translateX(5px);
+}
+
+.dropDown.active h4{
+    transform: translateX(5px);
+}
+
+.dropDown .drop {
+    background-color: var(--dropDown);
+    height: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 0.2rem;
+}
+
+.dropDown.active .drop{
+    padding: 0.5rem 1.5rem;
+    height: 100%;
+}
+
+.dropDown.active .head{
+    background-color: var(--dropDown);
+    color: #fff;
+}
+
+.drop li {
+    list-style: none;
+    margin: 0.2rem 0;
+}
+
+li a{
+    font-size: 0.9rem;
+    position: relative;
+}
+
+li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.322);
+    height: 1px;
+    transition: 400ms ease-in-out;
+    transform: scale(0);
+    transform-origin: left;
+}
+
+li a:hover::after{
+    transform: scale(1);
+}
+
+@media(max-width : 885px){
+    .close{
+        display: inline;
+    }
+
+    .sideBar .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

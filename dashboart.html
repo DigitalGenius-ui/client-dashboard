@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fomantic-ui  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
+    <!-- thimefy icons -->
+    <link rel="stylesheet" href="./css/themify-icons.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- custom javascript  -->
+    <script src="./javascript/dashboard.js" defer></script>
+    <title>dashboard</title>
+</head>
+<body>
+    <div class="container">
+      <div class="overFlow"></div>
+        <!-- sideBar part 'dynamic'  -->
+        <div class="left-side">
+            <div class="sideBar"></div>
+        </div>
+        <!-- right part -->
+        <div class="right-side">
+          <!-- header  -->
+          <div class="auth">
+            <!-- bar menu  -->
+            <div class="ti-menu bar"></div>
+            <!-- sign out  --> 
+            <div class="ui buttons">
+                <div class="ui combo top right pointing dropdown icon button">
+                   <div class="btn">
+                    <span class="ti-settings"></span>
+                    <span class="ti-angle-down"></span>
+                   </div>
+                  <div class="menu">
+                    <div class="item"><span class="ti-user"></span> User</div>
+                    <div class="item"><span class="ti-new-window"></span> Sign Out</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content">
+            <div class="details">
+                     <!-- start and end date  -->
+            <div class="timeTable">
+                <div class="ui form">
+                    <div class="fields">
+                      <div class="field">
+                        <label>Start date</label>
+                        <div class="ui calendar" id="rangestart">
+                          <div class="ui input left icon">
+                            <i class="calendar icon"></i>
+                            <input type="text" placeholder="Start">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="field">
+                        <label>End date</label>
+                        <div class="ui calendar" id="rangeend">
+                          <div class="ui input left icon">
+                            <i class="calendar icon"></i>
+                            <input type="text" placeholder="End">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="export">Export Excel</button>
+            </div>
+            <!-- counts boxes  -->
+            <div class="gridContainer">
+                <!-- total-order -->
+                <div class="grid">
+                    <h1>Total Order Count</h1>
+                    <div class="boxes total"></div>
+                </div>
+                <!-- fdm sla part -->
+                <div class="grid">
+                    <h1>FDM / SLA Orders Count</h1>
+                    <div class="boxes fdm"></div>
+                </div>
+                <!-- material part -->
+                <div class="grid">
+                    <h1>FDM Material Usage Count</h1>
+                    <div class="boxes material"></div>
+                </div>
+                <!-- color part -->
+                <div class="grid">
+                    <h1>SLA Color Usage Count</h1>
+                    <div class="boxes color"></div>
+                </div>
+            </div>
+            </div>
+                <div class="chart">
+                    <div class="chartData">
+                    <div class="chartTime">
+                        <h1>Users by the time of day</h1>
+                        <div class="ui form">
+                            <div class="fields">
+                              <div class="field">
+                                <div class="ui calendar" id="rangestart">
+                                  <div class="ui input left icon">
+                                    <i class="calendar icon"></i>
+                                    <input type="text" placeholder="Date">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                        <table class="ui very basic collapsing celled table showdata">
+                            <tbody id="freqtable">
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- .sideBar  -->
+    <script src="./javascript/sideBar.js"></script>
+    <script>
+    $('#rangestart').calendar({
+      type: 'date',
+      endCalendar: $('#rangeend')
+    });
+    $('#rangeend').calendar({
+      type: 'date',
+      startCalendar: $('#rangestart')
+    });
+    </script>
+</body>
+</html>
