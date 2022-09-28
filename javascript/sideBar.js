@@ -74,6 +74,7 @@ barDrop.forEach((item) => {
     heads.forEach((head) => {
       head.classList.remove("active");
     });
+    head.classList.add("active")
   });
 });
 

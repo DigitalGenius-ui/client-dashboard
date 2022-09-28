@@ -12,11 +12,13 @@
 .timeTable .ui.form .field .ui.input input{
     width: 10rem;
     height: 3rem;
+    font-size: 0.8rem;
 }
 
 .chart .ui.form .fields .field .ui.input input{
-    width: 8rem;
+    width: 10rem;
     height: 2.5rem;
+    font-size: 0.8rem;
 }
 
 .chartTime h1{
