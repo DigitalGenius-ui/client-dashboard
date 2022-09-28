@@ -11,15 +11,15 @@ let content = `
         <span class="ti-angle-right"></span>
     </div>
     <ul class="drop">
-        <li><a href="#">New</a></li>
-        <li><a href="#">Checked</a></li>
-        <li><a href="#">Payment done</a></li>
-        <li><a href="#">Printing</a></li>
-        <li><a href="#">Completed</a></li>
-        <li><a href="#">Close</a></li>
-        <li><a href="#">File defects</a></li>
-        <li><a href="#">Re-print</a></li>
-        <li><a href="#">Hidden</a></li>
+        <li><a class="link" href="#">New</a></li>
+        <li><a class="link" href="#">Checked</a></li>
+        <li><a class="link" href="#">Payment done</a></li>
+        <li><a class="link" href="#">Printing</a></li>
+        <li><a class="link" href="#">Completed</a></li>
+        <li><a class="link" href="#">Close</a></li>
+        <li><a class="link" href="#">File defects</a></li>
+        <li><a class="link" href="#">Re-print</a></li>
+        <li><a class="link" href="#">Hidden</a></li>
     </ul>
     </div>
     <div class="dropDown">
@@ -28,9 +28,9 @@ let content = `
         <span class="ti-angle-right"></span>
     </div>
     <ul class="drop">
-        <li><a href="#">New</a></li>
-        <li><a href="#">Checked</a></li>
-        <li><a href="#">File defects</a></li>
+        <li><a class="link" href="#">New</a></li>
+        <li><a class="link" href="#">Checked</a></li>
+        <li><a class="link" href="#">File defects</a></li>
     </ul>
     </div>
     <div class="dropDown">
@@ -39,9 +39,9 @@ let content = `
         <span class="ti-angle-right"></span>
     </div>
     <ul  class="drop">
-        <li><a href="#">Payment done</a></li>
-        <li><a href="#">Printing</a></li>
-        <li><a href="#">Re-print</a></li>
+        <li><a class="link" href="#">Payment done</a></li>
+        <li><a class="link" href="#">Printing</a></li>
+        <li><a class="link" href="#">Re-print</a></li>
     </ul>
     </div>
     <div class="dropDown">
@@ -50,9 +50,9 @@ let content = `
         <span class="ti-angle-right"></span>
     </div>
     <ul  class="drop">
-        <li><a href="#">Completed</a></li>
-        <li><a href="#">Close</a></li>
-        <li><a href="#">Hidden</a></li>
+        <li><a class="link" href="#">Completed</a></li>
+        <li><a class="link" href="#">Close</a></li>
+        <li><a class="link" href="#">Hidden</a></li>
     </ul>
     </div>
     </div>
@@ -61,6 +61,7 @@ sideBar.innerHTML = content;
 
 const barDrop = document.querySelectorAll(".dropDown");
 const heads = document.querySelectorAll(".head");
+const links = document.querySelectorAll(".link")
 
 barDrop.forEach((item) => {
   const head = item.querySelector(".head");
@@ -93,17 +94,31 @@ close.addEventListener("click", () => {
     leftSide.classList.remove("active");
     barDrop.forEach(item => {
       item.classList.remove("active");
-      document.querySelector(".head").classList.add("active");
       overFlow.classList.remove("active")
     });
+    heads.forEach((head) => {
+      head.classList.remove("active");
+    });
+    document.querySelector(".head").classList.add("active");
 });
 
 overFlow.addEventListener("click", () => {
     leftSide.classList.remove("active");
     barDrop.forEach(item => {
       item.classList.remove("active");
-      document.querySelector(".head").classList.add("active");
       overFlow.classList.remove("active")
     });
+    heads.forEach((head) => {
+      head.classList.remove("active");
+    });
+    document.querySelector(".head").classList.add("active");
 });
+
+// links 
+links.forEach((item) => {
+  item.addEventListener("click", () => {
+    leftSide.classList.remove("active");
+    overFlow.classList.remove("active");
+  });
+})
 

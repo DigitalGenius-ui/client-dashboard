@@ -72,6 +72,10 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    .ui.form .fields{
+        flex-wrap: nowrap;
+    }
 }
 
 @media(max-width:770px){
