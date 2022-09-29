@@ -30,11 +30,11 @@
     font-family: 'Noto Sans TC', sans-serif !important;
 }
 .showdata td{
-    width: 50px;
+    width: 50px !important;
 }
 
 .showdata tbody{
-    border: 1px solid #bdbdbd !important;
+    border: 1px solid #bdbdbd !important;;
 }
 .showdata td{
     padding: 0em !important;
@@ -51,7 +51,7 @@
 .linecut span{
     background-color: white !important;
     margin-left: -0.6em !important;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 .linecutText{
     padding-left: 0 !important;
@@ -61,14 +61,4 @@
     background-color: white !important;
     margin-left: -1.6em !important;
     font-size: 0.8rem;
-}
-
-@media(max-width:770px){
-    .chartData{
-        margin-top: 0;
-    }
-
-    .showdata td{
-        width: 100%;
-    }
 }

@@ -54,7 +54,7 @@ h5, p, span {
 
 @media(max-width:885px){
     .left-side{
-        width: 17rem;
+        width: 20rem;
         position: fixed;
         transform: translateX(-20rem);
         transition: transform 400ms ease-in-out;

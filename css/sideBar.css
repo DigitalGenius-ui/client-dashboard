@@ -2,15 +2,19 @@
     height: 100vh;
     position: sticky;
     top: 0;
-    color: #fff;
-    width: 14rem;
+    width: 17rem;
     background-color: var(--sideBar);
+    overflow: auto;
+    scrollbar-color: dark;
+    scrollbar-width: thin;
+    color: rgba(255, 255, 255, 0.674);
 }
 
 .sideBar .title{
     border-bottom: 1px solid rgba(255, 255, 255, 0.231);
     padding: 1.5rem 1rem;
     margin-bottom: 4rem;
+    color: #fff;
 }
 
 .close{
@@ -25,7 +29,7 @@
     padding: 0 0.8rem;
 }
 
-.dropDown .head{
+.head{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,16 +40,44 @@
     transition: 400ms ease-in-out;
 }
 
-.head h4{
+.head .headIcon{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.headIcon .menuIcon{
     font-size: 1rem;
+    color: rgba(255, 255, 255, 0.674);
+}
+
+.dropDown.active .menuIcon{
+    color: #fff;
+}
+
+.head.active .menuIcon{
+    color: #fff;
+}
+
+.head .arrow{
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.674);;
+}
+
+.head.active .arrow{
+    color: #fff;
+}
+
+.head h4{
+    font-size: 0.9rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.674);
     transition: 400ms ease-in-out;
+    margin-top: 0.1rem;
 }
 
 .head:hover{
     background-color: var(--dropDown);
-    color: #fff;
 }
 
 .head.active{
@@ -53,25 +85,28 @@
     color: #fff;
 }
 
-.head:hover h4{
-    transform: translateX(5px);
+.head.active h4{
+    font-weight: 700;
+    color: #fff;
 }
 
 .dropDown.active h4{
-    transform: translateX(5px);
+    font-weight: 700;
+    color: #fff;
 }
 
 .dropDown .drop {
-    background-color: var(--dropDown);
     height: 0;
     overflow: hidden;
     border-radius: 5px;
-    margin-top: 0.2rem;
+    /* margin-top: 0.2rem; */
+    transition: height 400ms ease-in-out;
+    margin-bottom: 0.2rem;
 }
 
 .dropDown.active .drop{
-    padding: 0.5rem 1.5rem;
-    height: 100%;
+    padding: 0.5rem;
+    height: auto;
 }
 
 .dropDown.active .head{
@@ -79,31 +114,103 @@
     color: #fff;
 }
 
+.arrow{
+    transition: transform 400ms ease-in-out;
+}
+
+.dropDown.active .arrow{
+    transform: rotate(90deg);
+}
+
 .drop li {
     list-style: none;
-    margin: 0.2rem 0;
 }
 
-li a{
+.drop li p{
     font-size: 0.9rem;
-    position: relative;
 }
 
-li a::after{
+li .link{
+    font-size: 0.8rem;
+    position: relative;
+    color: rgba(255, 255, 255, 0.678);
+    display: block;
+    margin:0.2rem 1rem;
+    padding: 0.1rem 0.2rem;
+    border-radius: 3px;
+    transition: 400ms ease-in-out;
+}
+
+.link:hover{
+    color: var(--btn-color);
+}
+
+.link:after{
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 1px solid rgba(255, 255, 255, 0.322);
-    height: 1px;
-    transition: 400ms ease-in-out;
-    transform: scale(0);
-    transform-origin: left;
+    width: 4px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: var(--btn-color);
+    left: -0.8rem;
+    top: 43%;
+    display: none;
 }
 
-li a:hover::after{
-    transform: scale(1);
+.link.active:after{
+    display: inline;
+}
+
+/* sub menu part  */
+.submenuHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.2rem 0;
+    cursor: pointer;
+    padding: 0.3rem 1rem;
+    transition: background 400ms ease-in-out;
+    border-radius: 3px;
+}
+
+.drop .submenuHead p{
+    font-size: 0.8rem;
+}
+
+.drop .submenuHead:hover{
+    background-color: var(--dropDown);
+}
+
+.drop .subMenuArrow{
+    font-size: 0.6rem;
+    transition: 400ms ease-in-out;
+}
+
+.subMenu.active .subMenuArrow{
+    transform: rotate(90deg);
+}
+
+.linksDrop{
+    display: none;
+}
+
+.linksDrop li a{
+    padding: 0 0.2rem;
+    margin:0.2rem 0 0 1.7rem;
+}
+
+.subMenu.active .linksDrop{
+    display: block;
+}
+
+.submenuHead.active{
+    background-color: var(--dropDown);
+    color: #fff;
+    font-weight: 600;
+}
+
+.link.active{
+    color: var(--btn-color);
 }
 
 @media(max-width : 885px){

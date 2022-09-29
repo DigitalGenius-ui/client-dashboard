@@ -2,59 +2,109 @@ const sideBar = document.querySelector(".sideBar")
 
 let content = `
     <div class="title">
-      <h1>Hi, User Name</h1>
-      <span class="ti-close close"></span>
+    <h1>Hi, User Name</h1>
+    <span class="ti-close close"></span>
     </div>
     <div class="dropDown">
     <div class="head active">
-        <h4>All</h4>
-        <span class="ti-angle-right"></span>
+      <div class="headIcon">
+        <span class="ti-home menuIcon"></span>
+        <h4>Dashboard & Export</h4>
+      </div>
+        <span class="ti-angle-right arrow"></span>
     </div>
     <ul class="drop">
-        <li><a class="link" href="#">New</a></li>
-        <li><a class="link" href="#">Checked</a></li>
-        <li><a class="link" href="#">Payment done</a></li>
-        <li><a class="link" href="#">Printing</a></li>
-        <li><a class="link" href="#">Completed</a></li>
-        <li><a class="link" href="#">Close</a></li>
-        <li><a class="link" href="#">File defects</a></li>
-        <li><a class="link" href="#">Re-print</a></li>
-        <li><a class="link" href="#">Hidden</a></li>
+        <li><a class="link" href="#">Something</a></li>
+        <li><a class="link" href="#">Something</a></li>
     </ul>
     </div>
     <div class="dropDown">
     <div class="head">
-        <h4>New</h4>
-        <span class="ti-angle-right"></span>
+      <div class="headIcon">
+        <span class="ti-notepad menuIcon"></span>
+        <h4>Order List ( Table )</h4>
+      </div>
+        <span class="ti-angle-right arrow"></span>
+    </div>
+    <!-- submenu  -->
+    <ul class="drop active">
+      <li class="subMenu">
+        <div class="submenuHead">
+          <p>All</p>
+          <span class="ti-angle-right subMenuArrow"></span>
+        </div>
+        <ul class="linksDrop">
+          <li><a class="link" href="#">New</a></li>
+          <li><a class="link" href="#">Checked</a></li>
+          <li><a class="link" href="#">Payment done</a></li>
+          <li><a class="link" href="#">Printing</a></li>
+          <li><a class="link" href="#">Completed</a></li>
+          <li><a class="link" href="#">Close</a></li>
+          <li><a class="link" href="#">File defects</a></li>
+          <li><a class="link" href="#">Re-print</a></li>
+          <li><a class="link" href="#">Hidden</a></li>
+        </ul>
+      </li>
+      <li class="subMenu">
+        <div class="submenuHead">
+          <p>New</p>
+          <span class="ti-angle-right subMenuArrow"></span>
+        </div>
+        <ul class="linksDrop">
+          <li><a class="link" href="#">New</a></li>
+          <li><a class="link" href="#">Checked</a></li>
+          <li><a class="link" href="#">File defects</a></li>
+        </ul>
+      </li>
+      <li class="subMenu">
+        <div class="submenuHead">
+          <p>Processing</p>
+          <span class="ti-angle-right subMenuArrow"></span>
+        </div>
+        <ul class="linksDrop">
+          <li><a class="link" href="#">Payment done</a></li>
+          <li><a class="link" href="#">Printing</a></li>
+          <li><a class="link" href="#">Re-print</a></li>
+        </ul>
+      </li>
+      <li class="subMenu">
+        <div class="submenuHead">
+          <p>Completed</p>
+          <span class="ti-angle-right subMenuArrow"></span>
+        </div>
+        <ul class="linksDrop">
+          <li><a class="link" href="#">Completed</a></li>
+          <li><a class="link" href="#">Close</a></li>
+          <li><a class="link" href="#">Hidden</a></li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+    <div class="dropDown">
+    <div class="head">
+      <div class="headIcon">
+        <span class="ti-layers-alt menuIcon"></span>
+        <p>Role Control</p>
+      </div>
+        <span class="ti-angle-right arrow"></span>
     </div>
     <ul class="drop">
-        <li><a class="link" href="#">New</a></li>
-        <li><a class="link" href="#">Checked</a></li>
-        <li><a class="link" href="#">File defects</a></li>
+        <li><a class="link" href="#">Something</a></li>
+        <li><a class="link" href="#">Something</a></li>
     </ul>
     </div>
     <div class="dropDown">
     <div class="head">
-        <h4>Processing</h4>
-        <span class="ti-angle-right"></span>
+      <div class="headIcon">
+        <span class="ti-settings menuIcon"></span>
+        <h4>Calculator Settings</h4>
+      </div>
+        <span class="ti-angle-right arrow"></span>
     </div>
-    <ul  class="drop">
-        <li><a class="link" href="#">Payment done</a></li>
-        <li><a class="link" href="#">Printing</a></li>
-        <li><a class="link" href="#">Re-print</a></li>
+    <ul class="drop">
+        <li><a class="link" href="#">Something</a></li>
+        <li><a class="link" href="#">Something</a></li>
     </ul>
-    </div>
-    <div class="dropDown">
-    <div class="head">
-        <h4>Completed</h4>
-        <span class="ti-angle-right"></span>
-    </div>
-    <ul  class="drop">
-        <li><a class="link" href="#">Completed</a></li>
-        <li><a class="link" href="#">Close</a></li>
-        <li><a class="link" href="#">Hidden</a></li>
-    </ul>
-    </div>
     </div>
 `;
 sideBar.innerHTML = content;
@@ -78,6 +128,42 @@ barDrop.forEach((item) => {
     head.classList.add("active")
   });
 });
+
+// order submenu 
+const subMenu = document.querySelectorAll(".subMenu");
+const submenuHeads = document.querySelectorAll(".submenuHead");
+
+const allLinks = document.querySelectorAll(".link");
+const linksDrop = document.querySelectorAll(".linksDrop");
+
+subMenu.forEach((menu) => {
+  const submenuHead = menu.querySelector(".submenuHead");
+  submenuHead.addEventListener("click", () => {
+    subMenu.forEach((item) => {
+      if(item !== menu){
+        item.classList.remove("active");
+      }
+    });
+
+    submenuHeads.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    menu.classList.toggle("active")
+    submenuHead.classList.add("active");
+  });
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    links.forEach((item) => {
+      if(link !== item){
+        item.classList.remove("active");
+      }
+    })
+    link.classList.toggle("active");
+  })
+})
 
 //bar part 
 const bar = document.querySelector(".bar");
