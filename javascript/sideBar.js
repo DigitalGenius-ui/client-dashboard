@@ -163,7 +163,34 @@ links.forEach((link) => {
     })
     link.classList.toggle("active");
   })
-})
+});
+
+// auth part 
+
+const auth = document.querySelector(".authInner")
+
+let authInner = `
+    <div class="ui combo top right pointing dropdown icon button">
+    <div class="btn">
+     <span class="ti-settings"></span>
+     <span class="ti-angle-down"></span>
+    </div>
+    <div class="menu">
+     <div class="item"><span class="ti-user"></span> User</div>
+     <div class="item"><span class="ti-new-window"></span> Sign Out</div>
+    </div>
+    </div>
+`;
+auth.innerHTML = authInner
+
+let signOut = document.querySelector(".combo.dropdown");
+
+// sign out drop down 
+$(signOut)
+    .dropdown({
+    action: 'combo'
+});
+
 
 //bar part 
 const bar = document.querySelector(".bar");
@@ -206,5 +233,6 @@ links.forEach((item) => {
     leftSide.classList.remove("active");
     overFlow.classList.remove("active");
   });
-})
+});
+
 

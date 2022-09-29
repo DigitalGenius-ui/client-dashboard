@@ -1,0 +1,84 @@
+.orderContainer{
+    background-color: #fff;
+    margin: 1rem;
+    box-shadow: 0px 0px 0.8px 0.1px grey;
+}
+
+.orderHead h1{
+    font-size: 1.1rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.142);
+    color: rgba(0, 0, 0, 0.776);
+}
+
+.orderContainer .status{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.status .field{
+    flex: 1;
+}
+
+.field .flex{
+    display: flex;
+    gap: 1rem;
+    background-color: #fff;
+    gap: 0.3rem;
+}
+
+.status .field p, .timeInputs .field p{
+    padding-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.status .statusBtn{
+   display: flex;
+   gap: 0.5rem;
+}
+
+.statusBtn button{
+    padding: 0.5rem;
+    width: 7rem;
+}
+
+.reference{
+    max-width: 59%;
+}
+
+.timeInputs{
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+}
+
+.timeInputs:last-child{
+    padding-bottom: 1.5rem;
+}
+
+.timeInputs .field{
+    flex: 1;
+}
+
+.input input{
+    background-color: grey;
+}
+
+.ui.fluid.input > input{
+    background-color: rgba(0, 0, 0, 0.053);
+}
+
+.ui.selection.dropdown{
+    background-color: rgba(0, 0, 0, 0.053);
+}
+
+@media(max-width:885px){
+    .field .flex{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

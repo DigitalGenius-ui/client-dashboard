@@ -29,19 +29,8 @@
           <div class="auth">
             <!-- bar menu  -->
             <div class="ti-menu bar"></div>
-            <!-- sign out  --> 
-            <div class="ui buttons">
-                <div class="ui combo top right pointing dropdown icon button">
-                   <div class="btn">
-                    <span class="ti-settings"></span>
-                    <span class="ti-angle-down"></span>
-                   </div>
-                  <div class="menu">
-                    <div class="item"><span class="ti-user"></span> User</div>
-                    <div class="item"><span class="ti-new-window"></span> Sign Out</div>
-                  </div>
-                </div>
-              </div>
+            <!-- sign out dynamic refer to sidebar.js --> 
+            <div class="ui buttons authInner"></div>
             </div>
             <div class="content">
             <div class="details">
@@ -136,7 +125,11 @@
 
     <!-- .sideBar  -->
     <script src="./javascript/sideBar.js"></script>
+    <!-- chart js  -->
+    <script src="./javascript/chart.js"></script>
+    
     <script>
+      // calender dropdown 
     $('#rangestart').calendar({
       type: 'date',
       endCalendar: $('#rangeend')

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fomantic-ui  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
+    <!-- thimefy icons -->
+    <link rel="stylesheet" href="./css/themify-icons.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- custom js file  -->
+    <script src="./javascript/table.js" defer></script>
+    <title>Table</title>
+</head>
+<body>
+    <div class="container">
+      <div class="overFlow"></div>
+        <!-- sideBar part 'dynamic'  -->
+        <div class="left-side">
+            <div class="sideBar"></div>
+        </div>
+        <div class="right-side">
+            <div class="auth">
+            <!-- bar menu  -->
+            <div class="ti-menu bar"></div>
+            <!-- sign out dynamic refer to sidebar.js--> 
+            <div class="ui buttons authInner"></div></div>
+            <!-- table order form part  -->
+            <div class="orderContainer">
+              <div class="orderHead">
+                <h1>Order Details</h1>
+              </div>
+              <!-- form part  -->
+                <div class="status">
+                  <div class="field">
+                    <p>Status</p>
+                    <div class="flex">
+                      <div class="ui fluid selection dropdown select">
+                        <input type="hidden" name="user">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select your Status </div>
+                        <div class="menu">
+                        </div>
+                      </div>
+                      <div class="statusBtn">
+                        <button class="ui tiny blue button">Submit</button>
+                        <button class="ui tiny blue button">Send Email</button>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- reference  -->
+                <div class="status reference">
+                  <div class="field">
+                    <p>Reference No</p>
+                  <div class="ui fluid input">
+                      <input type="text" name="reference" placeholder="YYYYMMDD_hhmm_s20230102_1030_1">
+                    </div>
+                  </div>
+                </div>
+                <!-- date, time session -->
+                <div class="timeInputs">
+                  <div class="field">
+                    <p>Date</p>
+                  <div class="ui fluid input">
+                      <input type="date" name="date">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <p>Time</p>
+                  <div class="ui fluid input">
+                      <input type="time" name="date">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <p>Session</p>
+                  <div class="ui fluid input">
+                      <input type="text" name="session" placeholder="s1/2">
+                    </div>
+                  </div>
+                </div>
+                <!-- date, time session -->
+                <div class="timeInputs">
+                  <div class="field">
+                    <p>NetID</p>
+                  <div class="ui fluid input">
+                      <input type="text" name="id" placeholder="gst2209" value="gst2209" maxlength="10">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <p>Name</p>
+                  <div class="ui fluid input">
+                      <input type="text" name="name" placeholder="Name...">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <p>Category</p>
+                  <div class="ui fluid input">
+                      <input type="text" name="session" placeholder="Staff/Student/etc.">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- table order form part  -->
+            <div class="orderContainer">
+              <div class="orderHead">
+                <h1>Order Details</h1>
+              </div>
+              <!-- form part  -->
+                <div class="status">
+                  <div class="field">
+                    <p>Status</p>
+                    <div class="flex">
+                      <div class="ui fluid selection dropdown select">
+                        <input type="hidden" name="user">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select your Status </div>
+                        <div class="menu">
+                        </div>
+                      </div>
+                      <div class="statusBtn">
+                        <button class="ui tiny blue button">Submit</button>
+                        <button class="ui tiny blue button">Send Email</button>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- reference  -->
+                <div class="status reference">
+                  <div class="field">
+                    <p>Reference No</p>
+                  <div class="ui fluid input">
+                      <input type="text" name="reference" placeholder="YYYYMMDD_hhmm_s20230102_1030_1">
+                    </div>
+                  </div>
+                </div>
+                <!-- date, time session -->
+                <div class="timeInputs">
+                  <div class="field">
+                    <p>Date</p>
+                  <div class="ui fluid input">
+                      <input type="date" name="date">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <p>Time</p>
+                  <div class="ui fluid input">
+                      <input type="time" name="date">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <p>Session</p>
+                  <div class="ui fluid input">
+                      <input type="text" name="session" placeholder="s1/2">
+                    </div>
+                  </div>
+                </div>
+                <!-- date, time session -->
+                <div class="timeInputs">
+                  <div class="field">
+                    <p>NetID</p>
+                  <div class="ui fluid input">
+                      <input type="text" name="id" placeholder="gst2209" value="gst2209" maxlength="10">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <p>Name</p>
+                  <div class="ui fluid input">
+                      <input type="text" name="name" placeholder="Name...">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <p>Category</p>
+                  <div class="ui fluid input">
+                      <input type="text" name="session" placeholder="Staff/Student/etc.">
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- .sideBar  -->
+    <script src="./javascript/sideBar.js"></script>
+    <script>
+      $('.ui.select')
+        .dropdown({
+          clearable: true,
+          values: [
+            {
+              name: 'New',
+              value: 'New',
+              selected : true
+            },
+            {
+              name     : 'Payment Done',
+              value    : 'Payment Done',
+            },
+            {
+              name     : 'Printing',
+              value    : 'Printing',
+            },
+            {
+              name     : 'Completed',
+              value    : 'Completed',
+            },
+            {
+              name     : 'Close',
+              value    : 'Close',
+            },
+            {
+              name     : 'File defects',
+              value    : 'File defects',
+            },
+            {
+              name     : 'Re-print',
+              value    : 'Re-print',
+            },
+            {
+              name     : 'Hidden',
+              value    : 'Hidden',
+            },
+          ]
+        })
+;
+    </script>
+</body>
+</html>
