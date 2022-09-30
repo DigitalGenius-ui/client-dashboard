@@ -72,5 +72,4 @@ input[type=file]::file-selector-button {
     width: 1rem;
     height: 1rem;
     background-color: red;
-    /* margin-bottom: 0.65rem; */
 }

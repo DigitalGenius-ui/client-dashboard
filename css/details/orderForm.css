@@ -77,4 +77,12 @@
         flex-direction: column;
         gap: 1rem;
     }
+
+    .orderContainer .status{
+        width: 100%;
+    }
+
+    .reference{
+        max-width: 100%;
+    }
 }
