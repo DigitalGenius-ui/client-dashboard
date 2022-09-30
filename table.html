@@ -28,204 +28,101 @@
             <!-- bar menu  -->
             <div class="ti-menu bar"></div>
             <!-- sign out dynamic refer to sidebar.js--> 
-            <div class="ui buttons authInner"></div></div>
-            <!-- table order form part  -->
-            <div class="orderContainer">
-              <div class="orderHead">
-                <h1>Order Details</h1>
+            <div class="ui buttons authInner"></div>
+          </div>
+            <!-- filter part  -->
+           <div class="filterContainer">
+            <div class="ui menu">
+              <div class="ui pointing dropdown item">
+                <span class="text">All</span>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="item">New</div>
+                  <div class="item">Checked</div>
+                  <div class="item">Payment done</div>
+                  <div class="item">Printing</div>
+                  <div class="item">Completed</div>
+                  <div class="item">Close</div>
+                  <div class="item">File defects</div>
+                  <div class="item">Re-print</div>
+                  <div class="item">Hidden</div>
+                </div>
               </div>
-              <!-- form part  -->
-                <div class="status">
-                  <div class="field">
-                    <p>Status</p>
-                    <div class="flex">
-                      <div class="ui fluid selection dropdown select">
-                        <input type="hidden" name="user">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">Select your Status </div>
-                        <div class="menu">
-                        </div>
-                      </div>
-                      <div class="statusBtn">
-                        <button class="ui tiny blue button">Submit</button>
-                        <button class="ui tiny blue button">Send Email</button>
-                      </div>
-                    </div>
-                    </div>
+              <div class="ui pointing dropdown item">
+                <span class="text">New</span>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="item">New</div>
+                  <div class="item">Checked</div>
+                  <div class="item">File defects</div>
                 </div>
-                <!-- reference  -->
-                <div class="status reference">
-                  <div class="field">
-                    <p>Reference No</p>
-                  <div class="ui fluid input">
-                      <input type="text" name="reference" placeholder="YYYYMMDD_hhmm_s20230102_1030_1">
-                    </div>
-                  </div>
-                </div>
-                <!-- date, time session -->
-                <div class="timeInputs">
-                  <div class="field">
-                    <p>Date</p>
-                  <div class="ui fluid input">
-                      <input type="date" name="date">
-                    </div>
-                  </div>
-                  <div class="field">
-                    <p>Time</p>
-                  <div class="ui fluid input">
-                      <input type="time" name="date">
-                    </div>
-                  </div>
-                  <div class="field">
-                    <p>Session</p>
-                  <div class="ui fluid input">
-                      <input type="text" name="session" placeholder="s1/2">
-                    </div>
-                  </div>
-                </div>
-                <!-- date, time session -->
-                <div class="timeInputs">
-                  <div class="field">
-                    <p>NetID</p>
-                  <div class="ui fluid input">
-                      <input type="text" name="id" placeholder="gst2209" value="gst2209" maxlength="10">
-                    </div>
-                  </div>
-                  <div class="field">
-                    <p>Name</p>
-                  <div class="ui fluid input">
-                      <input type="text" name="name" placeholder="Name...">
-                    </div>
-                  </div>
-                  <div class="field">
-                    <p>Category</p>
-                  <div class="ui fluid input">
-                      <input type="text" name="session" placeholder="Staff/Student/etc.">
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <!-- table order form part  -->
-            <div class="orderContainer">
-              <div class="orderHead">
-                <h1>Order Details</h1>
               </div>
-              <!-- form part  -->
-                <div class="status">
-                  <div class="field">
-                    <p>Status</p>
-                    <div class="flex">
-                      <div class="ui fluid selection dropdown select">
-                        <input type="hidden" name="user">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">Select your Status </div>
-                        <div class="menu">
-                        </div>
-                      </div>
-                      <div class="statusBtn">
-                        <button class="ui tiny blue button">Submit</button>
-                        <button class="ui tiny blue button">Send Email</button>
-                      </div>
-                    </div>
-                    </div>
+              <div class="ui pointing dropdown item">
+                <span class="text">Processing</span>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="item">Payment done</div>
+                  <div class="item">Printing</div>
+                  <div class="item">Re-print</div>
                 </div>
-                <!-- reference  -->
-                <div class="status reference">
-                  <div class="field">
-                    <p>Reference No</p>
-                  <div class="ui fluid input">
-                      <input type="text" name="reference" placeholder="YYYYMMDD_hhmm_s20230102_1030_1">
-                    </div>
-                  </div>
+              </div>
+              <div class="ui pointing dropdown item">
+                <span class="text">Completed</span>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <div class="item">Completed</div>
+                  <div class="item">Close</div>
+                  <div class="item">Hidden</div>
                 </div>
-                <!-- date, time session -->
-                <div class="timeInputs">
-                  <div class="field">
-                    <p>Date</p>
-                  <div class="ui fluid input">
-                      <input type="date" name="date">
-                    </div>
-                  </div>
-                  <div class="field">
-                    <p>Time</p>
-                  <div class="ui fluid input">
-                      <input type="time" name="date">
-                    </div>
-                  </div>
-                  <div class="field">
-                    <p>Session</p>
-                  <div class="ui fluid input">
-                      <input type="text" name="session" placeholder="s1/2">
-                    </div>
-                  </div>
-                </div>
-                <!-- date, time session -->
-                <div class="timeInputs">
-                  <div class="field">
-                    <p>NetID</p>
-                  <div class="ui fluid input">
-                      <input type="text" name="id" placeholder="gst2209" value="gst2209" maxlength="10">
-                    </div>
-                  </div>
-                  <div class="field">
-                    <p>Name</p>
-                  <div class="ui fluid input">
-                      <input type="text" name="name" placeholder="Name...">
-                    </div>
-                  </div>
-                  <div class="field">
-                    <p>Category</p>
-                  <div class="ui fluid input">
-                      <input type="text" name="session" placeholder="Staff/Student/etc.">
-                    </div>
-                  </div>
-                </div>
+              </div>
             </div>
+           </div>
+           <!-- table part  -->
+           <div class="tableContainer">
+            <div class="ui tiny fluid input search">
+              <span>Search:</span>
+              <input type="text" placeholder="search...">
+            </div>
+            <table class="ui celled table">
+              <thead>
+                <tr><th>Status</th>
+                <th>Ref.No</th>
+                <th>Date</th>
+                <th>Session</th>
+                <th>Category</th>
+                <th>NetID</th>
+                <th>Name</th>
+                <th>Est.Time</th>
+                <th>3d Tech.</th>
+                <th>File</th>
+              </tr></thead>
+              <tbody class="tableBody">
+                <!-- <tr class="tableRow">
+                  <td data-label="status">New</td>
+                  <td data-label="ref">20230102_1030_1</td>
+                  <td data-label="data">2023-01-02</td>
+                  <td data-label="session">1</td>
+                  <td data-label="category">Student</td>
+                  <td data-label="netId">gst220988</td>
+                  <td data-label="name">Chan Tin Man </td>
+                  <td data-label="time">15 hours</td>
+                  <td data-label="tech">SLA/FDM</td>
+                  <td data-label="file">
+                    <a href="#">link</a>
+                  </td>
+                </tr> -->
+              </tbody>
+            </table>
+           </div>
         </div>
+      </div>
 
     <!-- .sideBar  -->
     <script src="./javascript/sideBar.js"></script>
     <script>
-      $('.ui.select')
-        .dropdown({
-          clearable: true,
-          values: [
-            {
-              name: 'New',
-              value: 'New',
-              selected : true
-            },
-            {
-              name     : 'Payment Done',
-              value    : 'Payment Done',
-            },
-            {
-              name     : 'Printing',
-              value    : 'Printing',
-            },
-            {
-              name     : 'Completed',
-              value    : 'Completed',
-            },
-            {
-              name     : 'Close',
-              value    : 'Close',
-            },
-            {
-              name     : 'File defects',
-              value    : 'File defects',
-            },
-            {
-              name     : 'Re-print',
-              value    : 'Re-print',
-            },
-            {
-              name     : 'Hidden',
-              value    : 'Hidden',
-            },
-          ]
-        })
-;
+      $('.ui.dropdown')
+      .dropdown()
+      ;
     </script>
 </body>
 </html>

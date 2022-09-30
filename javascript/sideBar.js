@@ -14,8 +14,8 @@ let content = `
         <span class="ti-angle-right arrow"></span>
     </div>
     <ul class="drop">
-        <li><a class="link" href="#">Something</a></li>
-        <li><a class="link" href="#">Something</a></li>
+        <li><a class="link" href="./details.html">Detail</a></li>
+        <li><a class="link" href="./table.html">Table</a></li>
     </ul>
     </div>
     <div class="dropDown">

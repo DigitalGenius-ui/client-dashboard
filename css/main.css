@@ -7,8 +7,14 @@
 @import url("./homePage/counts.css");
 @import url("./homePage/chart.css");
 
+/* details */
+@import url("./details/orderForm.css");
+@import url("./details/fileForm.css");
+
 /* table */
-@import url("./table/statusForm.css");
+@import url("./table/table.css");
+
+
 *{
     margin: 0;
     padding: 0;

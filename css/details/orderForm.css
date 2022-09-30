@@ -64,10 +64,6 @@
     flex: 1;
 }
 
-.input input{
-    background-color: grey;
-}
-
 .ui.fluid.input > input{
     background-color: rgba(0, 0, 0, 0.053);
 }

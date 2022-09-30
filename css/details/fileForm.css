@@ -1,0 +1,76 @@
+input[type=file]{
+    cursor: pointer;
+}
+
+input[type=file]::file-selector-button {
+    padding: 0;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border: none;
+}
+
+.formBtn{
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deleteModal{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.493);
+    z-index: 100000000;
+    transform: scale(0);
+    transition: 300ms ease;
+}
+
+.deleteModal.active{
+    transform: scale(1);
+}
+
+.deleteModal .modal{
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 0.2px #000;
+    width: 25rem;
+}
+
+.modal .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.body, .footer, .header{
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.169);
+}
+
+.modal p{
+    font-size: 0.8rem;
+}
+
+.footer{
+    text-align: right;
+}
+
+.ti-close{
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.item .colorFlex{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.item .colorFlex .color{
+    width: 1rem;
+    height: 1rem;
+    background-color: red;
+    /* margin-bottom: 0.65rem; */
+}

@@ -1,0 +1,28 @@
+.filterContainer, .tableContainer{
+    margin: 1rem;
+}
+
+.tableContainer{
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.tableContainer .search{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 17rem;
+    margin-left: auto;
+}
+
+.ui.fluid.input > input{
+    background-color: rgba(0, 0, 0, 0.053);
+}
+
+.tableContainer .table tr{
+    font-size: 0.8rem;
+}
+
+.tableContainer .table td{
+    font-size: 0.8rem;
+}
