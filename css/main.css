@@ -58,6 +58,7 @@ h5, p, span {
 
 .right-side{
     flex: 4;
+    overflow: auto;
 }
 
 @media(max-width:885px){

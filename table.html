@@ -32,7 +32,7 @@
           </div>
             <!-- filter part  -->
            <div class="filterContainer">
-            <div class="ui menu">
+            <div class="ui menu filterFlex">
               <div class="ui pointing dropdown item">
                 <span class="text">All</span>
                 <i class="dropdown icon"></i>
@@ -83,7 +83,8 @@
               <span>Search:</span>
               <input type="text" placeholder="search...">
             </div>
-            <table class="ui celled table">
+            <div class="table-overFlow">
+              <table class="ui celled table unstackable">
               <thead>
                 <tr><th>Status</th>
                 <th>Ref.No</th>
@@ -113,6 +114,19 @@
                 </tr> -->
               </tbody>
             </table>
+            </div>
+            <div class="pagination">
+              <div class="pagination-btn">
+                <!-- <button class="item back btn-disabled">Previous</button> -->
+                <div class="pagination-number">
+                  <!-- <button class="item number-active">1</button>
+                  <button class="item">2</button>
+                  <button class="item">3</button>
+                  <button class="item">4</button>
+                  <button class="item">5</button> -->
+                </div>
+                <!-- <button class="item next btn-active">Next</button> -->
+              </div>
            </div>
         </div>
       </div>
