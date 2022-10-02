@@ -10,6 +10,7 @@ const tableData = {
         name : "Chan Tin Man",
         est : "15 hours",
         model : "SLA/FDM",
+        link : "https://www.google.co.jp/"
     }
 
 const tableData2 = {
@@ -22,6 +23,7 @@ const tableData2 = {
         name : "Chan",
         est : "10 hours",
         model : "SLA/FDM",
+        link : "https://www.google.co.jp/"
     }
 
 // handle the table data 
@@ -73,7 +75,6 @@ const paginationBtn = (pages) => {
   
     if(maxRight > pages){
       maxLeft = pages - (state.window - 1);
-  
       if(maxLeft < 1){
         maxLeft = 1
       }
@@ -81,15 +82,34 @@ const paginationBtn = (pages) => {
     }
   const btnContainer = document.querySelector(".pagination-number");
   btnContainer.innerHTML = "";
+  let activeClass;
+  let prevBtn;
+  let nextBtn;
+
   for (let page = maxLeft; page <= maxRight; page++) {
-    btnContainer.innerHTML +=`<button class="item page" value=${page}>${page}</button>`;
+    if(page == state.page){
+      activeClass = "active"
+    }else{
+      activeClass = ""
+    }
+
+    if(page > 1){
+      nextBtn = "active"
+    }
+
+    if(page >= pages){
+      prevBtn = "active"
+    }
+
+    btnContainer.innerHTML +=`<button class="item page ${activeClass}" value=${page}>${page}</button>`;
   }
+
   if (state.page != 1) {
-    btnContainer.innerHTML = `<button value=${1} class="page item next btn-active">First..</button>` + btnContainer.innerHTML
+    btnContainer.innerHTML = `<button value=${1} class="page item ${prevBtn}">First</button>` + btnContainer.innerHTML;
   }
 
   if (state.page != pages) {
-    btnContainer.innerHTML += `<button value=${pages} class="page item next btn-active">Last..</button>`
+    btnContainer.innerHTML += `<button value=${pages} class="page item ${nextBtn}">Last</button>`;
   }
   const pageBtn = document.querySelectorAll(".page");
   pageBtn.forEach(page => {
@@ -104,7 +124,7 @@ const paginationBtn = (pages) => {
 function table(){
   const data = pagination(state.querySet, state.page, state.row);
   const tableInner = data.querySet.map((item) => {
-    const { status, ref, date, session, category, netID, name, est, model} = item;
+    const { status, ref, date, session, category, netID, name, est, model, link} = item;
     return `
     <tr class="tableRow">
         <td data-label="status">${status}</td>
@@ -117,7 +137,7 @@ function table(){
         <td data-label="time">${est}</td>
         <td data-label="tech">${model}</td>
         <td data-label="file">
-          <a href="#">link</a>
+          <a href="${link}" class="ti-link table-link"></a>
         </td>
     </tr>
     `
