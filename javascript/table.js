@@ -1,48 +1,223 @@
 const tableBody = document.querySelector(".tableBody");
 
-const tableData = {
-        status : "New",
-        ref : "20230102_1030_1",
-        date : "2023-01-02",
-        session : "1",
-        category : "Student",
-        netID : "gst220988",
-        name : "Chan Tin Man",
-        est : "15 hours",
-        model : "SLA/FDM",
-        link : "https://www.google.co.jp/"
+const tableData = [
+  {
+    status : "New",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Processing",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "3",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Completed",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "2",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "New",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Processing",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "3",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Completed",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "5",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "New",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Processing",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Completed",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Completed",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "New",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Processing",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Completed",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "New",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Processing",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Completed",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+]
+
+// handling the sort 
+const sort = document.querySelector(".table .head");
+sort.addEventListener("click", () => {
+  tableData.sort(sortTable);
+  table();
+});
+
+function sortTable(a, b) {
+    const statusA = a.status.toUpperCase();
+    const statusB = b.status.toUpperCase();
+
+    let comparison = 0;
+    if(statusA > statusB){
+      comparison = 1
+    }else if(statusA < statusB){
+      comparison = -1
     }
-
-const tableData2 = {
-        status : "Processed",
-        ref : "20230102_1030_1",
-        date : "2023-01-02",
-        session : "4",
-        category : "Staff",
-        netID : "gst220988",
-        name : "Chan",
-        est : "10 hours",
-        model : "SLA/FDM",
-        link : "https://www.google.co.jp/"
-    }
-
-// handle the table data 
-let combine = []
-let emptyArray = [];
-
-for (let x = 0; x < 200; x++) {
-  emptyArray[x] = tableData;
+    return comparison;
 }
-
-let arr = [];
-for (let x = 0; x < 50; x++) {
-  arr[x] = tableData2;
-}
-combine = [...emptyArray, ...arr];
 
 // handling the pagination 
 let state = {
-  "querySet" : combine,
+  "querySet" : tableData,
   "page" : 1,
   "row" : 7,
   "window" : 5
@@ -83,8 +258,8 @@ const paginationBtn = (pages) => {
   const btnContainer = document.querySelector(".pagination-number");
   btnContainer.innerHTML = "";
   let activeClass;
-  let prevBtn;
-  let nextBtn;
+  let startBtn;
+  let lastBtn;
 
   for (let page = maxLeft; page <= maxRight; page++) {
     if(page == state.page){
@@ -94,22 +269,21 @@ const paginationBtn = (pages) => {
     }
 
     if(page > 1){
-      nextBtn = "active"
+      lastBtn = "active"
     }
 
     if(page >= pages){
-      prevBtn = "active"
+      startBtn = "active"
     }
-
     btnContainer.innerHTML +=`<button class="item page ${activeClass}" value=${page}>${page}</button>`;
   }
 
   if (state.page != 1) {
-    btnContainer.innerHTML = `<button value=${1} class="page item ${prevBtn}">First</button>` + btnContainer.innerHTML;
+    btnContainer.innerHTML = `<button value=${1} class="page item ${startBtn}">First</button>` + btnContainer.innerHTML;
   }
 
   if (state.page != pages) {
-    btnContainer.innerHTML += `<button value=${pages} class="page item ${nextBtn}">Last</button>`;
+    btnContainer.innerHTML += `<button value=${pages} class="page item ${lastBtn}">Last</button>`;
   }
   const pageBtn = document.querySelectorAll(".page");
   pageBtn.forEach(page => {
@@ -120,6 +294,17 @@ const paginationBtn = (pages) => {
     });
   });
 }
+
+// search Handler 
+const search = document.getElementById("search");
+  search.addEventListener("input", (e) => {
+    const searchString = e.target.value
+    state.querySet = tableData.filter((item) => (
+      item.status.toLowerCase().includes(searchString) ||
+      item.name.toLowerCase().includes(searchString) 
+      ))
+    table();
+  });
 
 function table(){
   const data = pagination(state.querySet, state.page, state.row);
@@ -143,7 +328,6 @@ function table(){
     `
 });
 tableBody.innerHTML = (tableInner).join(" ");
-// console.log(data.page)
 paginationBtn(data.page)
 }
 

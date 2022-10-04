@@ -40,14 +40,14 @@
                     <p>Status</p>
                     <div class="flex">
                       <div class="ui fluid selection dropdown select">
-                        <input type="hidden" name="user">
+                        <input type="text" name="user">
                         <i class="dropdown icon"></i>
                         <div class="default text">Select your Status </div>
                         <div class="menu">
                         </div>
                       </div>
                       <div class="statusBtn">
-                        <button class="ui tiny blue button">Submit</button>
+                        <button class="ui tiny blue button" id="submit">Submit</button>
                         <button class="ui tiny blue button">Send Email</button>
                       </div>
                     </div>
@@ -58,7 +58,7 @@
                   <div class="field">
                     <p>Reference No</p>
                   <div class="ui fluid input">
-                      <input type="text" name="reference" placeholder="YYYYMMDD_hhmm_s20230102_1030_1">
+                      <input type="text" id="refNo" placeholder="YYYYMMDD_hhmm_s20230102_1030_1">
                     </div>
                   </div>
                 </div>
@@ -67,19 +67,19 @@
                   <div class="field">
                     <p>Date</p>
                   <div class="ui fluid input">
-                      <input type="date" name="date">
+                      <input type="date" id="date">
                     </div>
                   </div>
                   <div class="field">
                     <p>Time</p>
                   <div class="ui fluid input">
-                      <input type="time" name="date">
+                      <input type="time" id="time">
                     </div>
                   </div>
                   <div class="field">
                     <p>Session</p>
                   <div class="ui fluid input">
-                      <input type="text" name="session" placeholder="s1/2">
+                      <input type="text" placeholder="s1/2" id="session">
                     </div>
                   </div>
                 </div>
@@ -87,19 +87,19 @@
                   <div class="field">
                     <p>NetID</p>
                   <div class="ui fluid input">
-                      <input type="text" name="id" placeholder="gst2209" value="gst2209" maxlength="10">
+                      <input type="text" id="netId" placeholder="gst2209" value="gst2209" maxlength="10">
                     </div>
                   </div>
                   <div class="field">
                     <p>Name</p>
                   <div class="ui fluid input">
-                      <input type="text" name="name" placeholder="Name...">
+                      <input type="text" id="name" placeholder="Name...">
                     </div>
                   </div>
                   <div class="field">
                     <p>Category</p>
                   <div class="ui fluid input">
-                      <input type="text" name="session" placeholder="Staff/Student/etc.">
+                      <input type="text" id="category" placeholder="Staff/Student/etc.">
                     </div>
                   </div>
                 </div>
@@ -114,19 +114,19 @@
                   <div class="field">
                     <p>File</p>
                   <div class="ui fluid input">
-                      <input type="url" name="link" placeholder="hyperlink..">
+                      <input type="url" id="link" placeholder="hyperlink..">
                     </div>
                   </div>
                   <div class="field">
                     <p>Estimated Time</p>
                   <div class="ui fluid input">
-                      <input type="text" name="time" placeholder="00 hours">
+                      <input type="text" id="esTime" placeholder="00 hours">
                     </div>
                   </div>
                   <div class="field">
                     <p>Estimated Cost</p>
                   <div class="ui fluid input">
-                      <input type="text" name="session" placeholder="$0.00">
+                      <input type="text" id="esCost" placeholder="$0.00">
                     </div>
                   </div>
                 </div>
@@ -135,7 +135,7 @@
                     <p>3d printing Technologies</p>
                     <div class="flex">
                       <div class="ui fluid selection dropdown select printing">
-                        <input type="hidden" name="user">
+                        <input type="hidden">
                         <i class="dropdown icon"></i>
                         <div class="default text">Select 3d printing </div>
                         <div class="menu">
@@ -166,18 +166,18 @@
                   <div class="field">
                     <p>Infill </p>
                   <div class="ui fluid input">
-                      <input type="text" placeholder="Light / Normal / Stron">
+                      <input type="text" id="inFill" placeholder="Light / Normal / Stron">
                     </div>
                   </div>
                   <div class="field">
                     <p>Surface Quality</p>
                   <div class="ui fluid input">
-                      <input type="text" placeholder="Light / Normal / Fast">
+                      <input type="text" id="quality" placeholder="Light / Normal / Fast">
                     </div>
                   </div>
                 </div>
                 <div class="formBtn">
-                  <button class="ui primary button">Submit</button>
+                  <button class="ui primary button" id="fileSubmit">Submit</button>
                   <button class="ui red button formDelete">Delete</button>
                 </div>
             </div>
@@ -197,7 +197,6 @@
               </div>
             </div>
         </div>
-
         <!-- <div class="ui inline dropdown">
           <div class="text">
             <i class="color"></i>

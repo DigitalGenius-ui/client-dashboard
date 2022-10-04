@@ -76,3 +76,61 @@ modalClose.addEventListener("click", () => {
 modalCloseIcon.addEventListener("click", () => {
     deleteModal.classList.remove("active");
 });
+
+// form validation part 
+// status form 
+const submit = document.getElementById("submit");
+const refNo = document.getElementById("refNo");
+const date = document.getElementById("date");
+const time = document.getElementById("time");
+const session = document.getElementById("session");
+const netId = document.getElementById("netId");
+const personName = document.getElementById("name");
+const category = document.getElementById("category");
+console.log(submit)
+
+submit.addEventListener("click", () => {
+  formValidation(refNo);
+  formValidation(date);
+  formValidation(time);
+  formValidation(session);
+  formValidation(personName);
+  formValidation(category);
+  netIdValidation();
+});
+
+function netIdValidation(){
+  const parentElement = netId.parentElement;
+  if(netId.value.length < 10){
+    console.log(netId.value)
+    parentElement.classList.add("error")
+  }
+  else{
+    parentElement.classList.remove("error")
+  }
+}
+
+// file form part 
+const fileSubmit = document.getElementById("fileSubmit");
+const link = document.getElementById("link");
+const esTime = document.getElementById("esTime");
+const esCost = document.getElementById("esCost");
+const inFill = document.getElementById("inFill");
+const quality = document.getElementById("quality");
+
+fileSubmit.addEventListener("click", () => {
+  formValidation(link);
+  formValidation(esTime);
+  formValidation(esCost);
+  formValidation(inFill);
+  formValidation(quality);
+});
+
+function formValidation(input){
+  const parentElement = input.parentElement;
+  if(input.value === ""){
+    parentElement.classList.add("error")
+  }else{
+    parentElement.classList.remove("error")
+  }
+}

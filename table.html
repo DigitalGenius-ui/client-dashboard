@@ -81,12 +81,13 @@
            <div class="tableContainer">
             <div class="ui tiny fluid input search">
               <span>Search:</span>
-              <input type="text" placeholder="search...">
+              <input type="text" placeholder="search..." id="search">
             </div>
             <div class="table-overFlow">
               <table class="ui celled table unstackable">
               <thead>
-                <tr><th>Status</th>
+                <tr>
+                <th class="head">Status <i class="sort alphabet up icon"></i></th>
                 <th>Ref.No</th>
                 <th>Date</th>
                 <th>Session</th>
@@ -114,6 +115,11 @@
                 </tr> -->
               </tbody>
             </table>
+            </div>
+            <div class="colorBtn">
+              <button class="ui tiny primary tertiary button">Blue</button>
+              <button class="ui tiny olive tertiary button">Yellow</button>
+              <button class="ui tiny grey tertiary button">Grey</button>
             </div>
             <div class="pagination">
               <div class="pagination-btn">

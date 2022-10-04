@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fomantic-ui  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
+    <!-- thimefy icons -->
+    <link rel="stylesheet" href="./css/themify-icons.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title>Role Control</title>
+</head>
+<body>
+    <div class="container">
+      <div class="overFlow"></div>
+        <!-- sideBar part 'dynamic'  -->
+        <div class="left-side">
+            <div class="sideBar"></div>
+        </div>
+        <div class="right-side">
+            <div class="auth">
+            <!-- bar menu  -->
+            <div class="ti-menu bar"></div>
+            <!-- sign out dynamic refer to sidebar.js--> 
+            <div class="ui buttons authInner"></div>
+          </div>
+           <!-- table part  -->
+           <div class="orderContainer roleContainer">
+            <div class="roleHead">
+                <h1>Role Control</h1>
+            </div>
+            <div class="table-overFlow">
+              <table class="ui celled table unstackable">
+              <thead>
+                <tr>
+                <th></th>
+                <th>Fully Control</th>
+                <th>View all orders</th>
+                <th>View personal orders only</th>
+              </tr></thead>
+              <tbody class="tableBody">
+                <tr class="tableRow">
+                  <td class="action">
+                    <span class="ti-trash"></span>
+                    <span class="ti-pencil-alt"></span>
+                  </td>
+                  <td>20230102_1030_1</td>
+                  <td>20230102_1030_1</td>
+                  <td>20230102_1030_1</td>
+                </tr>
+                <tr class="tableRow">
+                  <td class="action">
+                    <span class="ti-trash"></span>
+                    <span class="ti-pencil-alt"></span>
+                  </td>
+                  <td>20230102_1030_1</td>
+                  <td>20230102_1030_1</td>
+                  <td>20230102_1030_1</td>
+                </tr>
+                <tr class="tableRow">
+                  <td class="add">
+                    <span class="ti-plus"></span>
+                  </td>
+                  <td>20230102_1030_1</td>
+                  <td>20230102_1030_1</td>
+                  <td>20230102_1030_1</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+           </div>
+        </div>
+      </div>
+
+    <!-- .sideBar  -->
+    <script src="./javascript/sideBar.js"></script>
+</body>
+</html>

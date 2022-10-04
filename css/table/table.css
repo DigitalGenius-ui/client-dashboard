@@ -6,6 +6,20 @@
     background-color: #fff;
     padding: 1rem;
     margin: 1rem;
+    box-shadow: 0px 0px 1px 0.2px grey;
+}
+
+.tableContainer .table .head{
+    cursor: pointer;
+}
+
+.tableContainer .table .head:hover{
+    background-color: rgba(0, 0, 0, 0.068);
+}
+
+.tableContainer .sort{
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.459);
 }
 
 .tableContainer .search{
@@ -44,6 +58,11 @@
 
 .tableContainer .table-link:hover{
     color: var(--btn-hover);
+}
+
+.colorBtn{
+    padding: 1rem;
+    box-shadow: 0px 0px 1px 0.2px grey;
 }
 
 /* pagination  */
