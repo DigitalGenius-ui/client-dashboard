@@ -498,7 +498,7 @@ const search = document.getElementById("search");
 });
 
 // filter handler 
-const all = document.querySelector("[data-all");
+const all = document.querySelector("[data-all]");
 const newFilter = document.querySelector("[data-new]");
 const processFilter = document.querySelector("[data-process]");
 const completeFilter = document.querySelector("[data-complete]");
