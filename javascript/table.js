@@ -507,6 +507,7 @@ const completeFilter = document.querySelector("[data-complete]");
 all.addEventListener("click", () => {
   state.querySet = tableData;
   table();
+  console.log("Hello")
 });
 
 // new filter part 
