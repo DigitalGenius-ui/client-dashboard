@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="./css/themify-icons.css">
     <!-- custom css  -->
     <link rel="stylesheet" href="./css/main.css">
-
+    <!-- custom javascript  -->
+    <script src="./javascript/role.js" defer></script>
     <title>Role Control</title>
 </head>
 <body>
@@ -39,36 +40,36 @@
               <thead>
                 <tr>
                 <th></th>
-                <th>Fully Control</th>
-                <th>View all orders</th>
-                <th>View personal orders only</th>
+                <th>PERMISSION</th>
+                <th>ROLE</th>
+                <th>NETID</th>
               </tr></thead>
               <tbody class="tableBody">
-                <tr class="tableRow">
-                  <td class="action">
-                    <span class="ti-trash"></span>
-                    <span class="ti-pencil-alt"></span>
-                  </td>
-                  <td>20230102_1030_1</td>
-                  <td>20230102_1030_1</td>
-                  <td>20230102_1030_1</td>
-                </tr>
-                <tr class="tableRow">
-                  <td class="action">
-                    <span class="ti-trash"></span>
-                    <span class="ti-pencil-alt"></span>
-                  </td>
-                  <td>20230102_1030_1</td>
-                  <td>20230102_1030_1</td>
-                  <td>20230102_1030_1</td>
-                </tr>
-                <tr class="tableRow">
+                <tr class="tableRow addTable">
                   <td class="add">
                     <span class="ti-plus"></span>
                   </td>
-                  <td>20230102_1030_1</td>
-                  <td>20230102_1030_1</td>
-                  <td>20230102_1030_1</td>
+                  <td>
+                    <select id="permission">
+                      <option value="Please Choose a Role">Please Choose a Permission</option>
+                      <option value="Fully Control">Fully Control</option>
+                      <option value="View all orders">View all orders</option>
+                      <option value="View personal orders only">View personal orders only</option>
+                    </select>
+                  </td>
+                  <td>
+                  <select id="role">
+                    <option value="Please Choose a Role">Please Choose a Role</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Assistance">Assistance</option>
+                    <option value="Normal User">Normal User</option>
+                  </select>
+                </td>
+                  <td>
+                    <div class="ui tiny input netId">
+                      <input type="text" id="netIdInput" placeholder="netID" value="@polyu.edu.hk">
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
