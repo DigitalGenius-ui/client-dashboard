@@ -50,7 +50,7 @@ const tableData = [
     link : "https://www.google.co.jp/"
   },
   {
-    status : "Processing",
+    status : "checked",
     ref : "20230102_1030_1",
     date : "2023-01-02",
     session : "3",
@@ -62,7 +62,7 @@ const tableData = [
     link : "https://www.google.co.jp/"
   },
   {
-    status : "Completed",
+    status : "file defects",
     ref : "20230102_1030_1",
     date : "2023-01-02",
     session : "5",
@@ -134,7 +134,163 @@ const tableData = [
     link : "https://www.google.co.jp/"
   },
   {
+    status : "hidden",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "close",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "re-print",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "printing",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "payment done",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "New",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
     status : "Processing",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "3",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Completed",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "2",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "New",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "checked",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "3",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "file defects",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "5",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "New",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Processing",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Completed",
     ref : "20230102_1030_1",
     date : "2023-01-02",
     session : "1",
@@ -170,7 +326,7 @@ const tableData = [
     link : "https://www.google.co.jp/"
   },
   {
-    status : "Processing",
+    status : "hidden",
     ref : "20230102_1030_1",
     date : "2023-01-02",
     session : "1",
@@ -182,7 +338,43 @@ const tableData = [
     link : "https://www.google.co.jp/"
   },
   {
-    status : "Completed",
+    status : "close",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "re-print",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "printing",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "15 hours",
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "payment done",
     ref : "20230102_1030_1",
     date : "2023-01-02",
     session : "1",
@@ -237,7 +429,6 @@ const pagination = (querySet, page, row) => {
 }
 
 // pagination button 
-
 const paginationBtn = (pages) => {
     // next and prev buttons 
     let maxLeft = (state.page - Math.floor(state.window / 2));
@@ -304,15 +495,62 @@ const search = document.getElementById("search");
       item.name.toLowerCase().includes(searchString) 
       ))
     table();
-  });
+});
 
+// filter handler 
+const all = document.querySelector("[data-all");
+const newFilter = document.querySelector("[data-new]");
+const processFilter = document.querySelector("[data-process]");
+const completeFilter = document.querySelector("[data-complete]");
+
+// all filter 
+all.addEventListener("click", () => {
+  state.querySet = tableData;
+  table();
+});
+
+// new filter part 
+newFilter.addEventListener("click", (e) => {
+  const target = e.target;
+  filterElements("new", target);
+  filterElements("file", target);
+  filterElements("check", target);
+  table();
+});
+
+// processing filter 
+processFilter.addEventListener("click", (e) => {
+  const target = e.target;
+  filterElements("payment", target);
+  filterElements("printing", target);
+  filterElements("rePrinting", target);
+  table();
+});
+
+// completed filter 
+completeFilter.addEventListener("click", (e) => {
+  const target = e.target;
+  filterElements("completed", target);
+  filterElements("close", target);
+  filterElements("hidden", target);
+  table();
+});
+
+function filterElements(className, target){
+  if(target.classList.contains(className)){
+    const innerText = (target.innerText).toLowerCase();
+    state.querySet = state.querySet.filter((item) => (item.status).toLocaleLowerCase() === innerText);
+  }
+}
+
+// show table items 
 function table(){
   const data = pagination(state.querySet, state.page, state.row);
   const tableInner = data.querySet.map((item) => {
     const { status, ref, date, session, category, netID, name, est, model, link} = item;
     return `
     <tr class="tableRow">
-        <td data-label="status">${status}</td>
+        <td data-label="status" style="text-transform : capitalize">${status}</td>
         <td data-label="ref">${ref}</td>
         <td data-label="date">${date}</td>
         <td data-label="session">${session}</td>
@@ -330,5 +568,4 @@ function table(){
 tableBody.innerHTML = (tableInner).join(" ");
 paginationBtn(data.page)
 }
-
 table();

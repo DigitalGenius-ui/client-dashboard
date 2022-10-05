@@ -33,46 +33,35 @@
             <!-- filter part  -->
            <div class="filterContainer">
             <div class="ui menu filterFlex">
-              <div class="ui pointing dropdown item">
-                <span class="text">All</span>
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                  <div class="item">New</div>
-                  <div class="item">Checked</div>
-                  <div class="item">Payment done</div>
-                  <div class="item">Printing</div>
-                  <div class="item">Completed</div>
-                  <div class="item">Close</div>
-                  <div class="item">File defects</div>
-                  <div class="item">Re-print</div>
-                  <div class="item">Hidden</div>
-                </div>
+              <div class="ui pointing dropdown item" data-all>
+                All
+                <span class="space"></span>
               </div>
               <div class="ui pointing dropdown item">
                 <span class="text">New</span>
                 <i class="dropdown icon"></i>
-                <div class="menu">
-                  <div class="item">New</div>
-                  <div class="item">Checked</div>
-                  <div class="item">File defects</div>
+                <div class="menu" data-new>
+                  <div class="item new">New</div>
+                  <div class="item check">Checked</div>
+                  <div class="item file">File defects</div>
                 </div>
               </div>
-              <div class="ui pointing dropdown item">
+              <div class="ui pointing dropdown item" data-process>
                 <span class="text">Processing</span>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                  <div class="item">Payment done</div>
-                  <div class="item">Printing</div>
-                  <div class="item">Re-print</div>
+                  <div class="item payment">Payment done</div>
+                  <div class="item printing">Printing</div>
+                  <div class="item rePrinting">Re-print</div>
                 </div>
               </div>
-              <div class="ui pointing dropdown item">
+              <div class="ui pointing dropdown item" data-complete>
                 <span class="text">Completed</span>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                  <div class="item">Completed</div>
-                  <div class="item">Close</div>
-                  <div class="item">Hidden</div>
+                  <div class="item completed">Completed</div>
+                  <div class="item close">Close</div>
+                  <div class="item hidden">Hidden</div>
                 </div>
               </div>
             </div>
