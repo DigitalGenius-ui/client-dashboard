@@ -39,8 +39,8 @@ const showData = tableData.map((item) => {
     return `
         <tr class="tableRow">
             <td class="action">
-              <span class="ti-trash"></span>
-              <span class="ti-pencil-alt"></span>
+              <span class="ui basic icon button"><i class="trash alternate icon"></i></span>
+              <span class="ui basic icon button"><i class="pen square icon"></i></span>
             </td>
             <td>${item.permission}</td>
             <td>${item.role}</td>

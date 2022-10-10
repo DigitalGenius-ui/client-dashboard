@@ -24,27 +24,28 @@
     font-size: 0.8rem;
 }
 
-.roleContainer .table th:nth-child(1){
-    width: 4rem;
-}
-
 .roleContainer .table .action, .add{
-    max-width: 4rem;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
 }
 
-.roleContainer .table .action,.add span{
-    font-size: 1.3rem;
-    cursor: pointer;
+.roleContainer .table .action{
+    padding: 0.7rem 0 0.7rem 0;
 }
 
+.roleContainer .table .action .icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
 
 .roleContainer .table .action span:nth-child(1){
     color: red;
-    font-size: 1.5rem;
 }
 
 .roleContainer .table .action span:nth-child(1):hover{

@@ -4,37 +4,37 @@ const tableData = [
   {
     status : "New",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2022-01-05",
     session : "1",
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "14 hours",
+    model : "FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "Processing",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2021-01-02",
     session : "3",
-    category : "Student",
+    category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "32 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "Completed",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2020-01-03",
     session : "2",
-    category : "Student",
+    category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "32 hours",
+    model : "SLS",
     link : "https://www.google.co.jp/"
   },
   {
@@ -45,8 +45,8 @@ const tableData = [
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "38 hours",
+    model : "SLS",
     link : "https://www.google.co.jp/"
   },
   {
@@ -54,106 +54,106 @@ const tableData = [
     ref : "20230102_1030_1",
     date : "2023-01-02",
     session : "3",
-    category : "Student",
+    category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "13 hours",
+    model : "SLA",
     link : "https://www.google.co.jp/"
   },
   {
     status : "file defects",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2022-01-05",
     session : "5",
-    category : "Student",
+    category : "Staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "17 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "New",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2022-01-05",
     session : "1",
-    category : "Student",
+    category : "Teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "10 hours",
+    model : "FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "Processing",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2019-01-02",
     session : "1",
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "7 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "Completed",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2019-01-02",
     session : "1",
-    category : "Student",
+    category : "Teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
     est : "15 hours",
-    model : "SLA/FDM",
+    model : "SLA 3D",
     link : "https://www.google.co.jp/"
   },
   {
     status : "Completed",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2025-01-02",
     session : "1",
-    category : "Student",
+    category : "Staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "9 hours",
+    model : "FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "New",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2025-01-02",
     session : "1",
-    category : "Student",
+    category : "Staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "9 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "hidden",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2018-01-02",
     session : "1",
-    category : "Student",
+    category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "3 hours",
+    model : "SLA",
     link : "https://www.google.co.jp/"
   },
   {
     status : "close",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2018-01-02",
     session : "1",
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "3 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -162,166 +162,166 @@ const tableData = [
     ref : "20230102_1030_1",
     date : "2023-01-02",
     session : "1",
-    category : "Student",
+    category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "4 hours",
+    model : "MJS",
     link : "https://www.google.co.jp/"
   },
   {
     status : "printing",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2020-01-02",
     session : "1",
-    category : "Student",
+    category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "9 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "payment done",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2020-01-02",
     session : "1",
-    category : "Student",
+    category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "9 hours",
+    model : "FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "New",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2021-01-02",
     session : "1",
-    category : "Student",
+    category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "5 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "Processing",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2021-01-02",
     session : "3",
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "8 hours",
+    model : "SLA",
     link : "https://www.google.co.jp/"
   },
   {
     status : "Completed",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2019-01-02",
     session : "2",
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "39 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "New",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2022-01-02",
     session : "1",
-    category : "Student",
+    category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "49 hours",
+    model : "SLS",
     link : "https://www.google.co.jp/"
   },
   {
     status : "checked",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2021-01-02",
     session : "3",
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "17 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "file defects",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2020-01-02",
     session : "5",
-    category : "Student",
+    category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "18 hours",
+    model : "FDM 3D",
     link : "https://www.google.co.jp/"
   },
   {
     status : "New",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2024-01-02",
     session : "1",
-    category : "Student",
+    category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "13 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "Processing",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2025-01-02",
     session : "1",
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "29 hours",
+    model : "MJF",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Completed",
+    ref : "20230102_1030_1",
+    date : "2025-01-02",
+    session : "1",
+    category : "teacher",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est : "44 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "Completed",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2022-01-02",
     session : "1",
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
-    link : "https://www.google.co.jp/"
-  },
-  {
-    status : "Completed",
-    ref : "20230102_1030_1",
-    date : "2023-01-02",
-    session : "1",
-    category : "Student",
-    netID : "gst220988",
-    name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "33 hours",
+    model : "SLA",
     link : "https://www.google.co.jp/"
   },
   {
     status : "New",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2026-01-02",
     session : "1",
-    category : "Student",
+    category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "16 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -330,74 +330,76 @@ const tableData = [
     ref : "20230102_1030_1",
     date : "2023-01-02",
     session : "1",
-    category : "Student",
+    category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "20 hours",
+    model : "FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "close",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2015-01-02",
     session : "1",
-    category : "Student",
+    category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "30 hours",
+    model : "SLA",
     link : "https://www.google.co.jp/"
   },
   {
     status : "re-print",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2014-01-02",
     session : "1",
-    category : "Student",
+    category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "10 hours",
+    model : "SLS",
     link : "https://www.google.co.jp/"
   },
   {
     status : "printing",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2015-01-02",
     session : "1",
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
+    est : "45 hours",
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
     status : "payment done",
     ref : "20230102_1030_1",
-    date : "2023-01-02",
+    date : "2014-01-02",
     session : "1",
-    category : "Student",
+    category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA/FDM",
+    est : "25 hours",
+    model : "MJF",
     link : "https://www.google.co.jp/"
   },
 ]
 
 // handling the sort 
-const sort = document.querySelector(".table .head");
-sort.addEventListener("click", () => {
-  tableData.sort(sortTable);
-  table();
-});
+const sort = document.querySelector(".table .status");
+const tableDate = document.querySelector(".table .tableDate");
+const category = document.querySelector(".table .category");
+const esTime = document.querySelector(".table .esTime");
+const tech = document.querySelector(".table .tech");
 
-function sortTable(a, b) {
+// status sort 
+function sortStatus(data) {
+  sort.addEventListener("click", () => {
+    let newSort = data.sort((a, b) => {
     const statusA = a.status.toUpperCase();
     const statusB = b.status.toUpperCase();
-
     let comparison = 0;
     if(statusA > statusB){
       comparison = 1
@@ -405,6 +407,70 @@ function sortTable(a, b) {
       comparison = -1
     }
     return comparison;
+    });
+    showTable(newSort)
+  });
+}
+
+// date sort 
+function dateSort(data){
+  tableDate.addEventListener("click", () => {
+    let newSort = data.sort(function(a,b){
+      let c = new Date(a.date);
+      let d = new Date(b.date);
+      return c-d;
+    });
+    showTable(newSort)
+  })
+}
+
+// category sort 
+function sortCategory(data) {
+  category.addEventListener("click", () => {
+    let newSort = data.sort((a, b) => {
+    const statusA = a.category.toUpperCase();
+    const statusB = b.category.toUpperCase();
+    let comparison = 0;
+    if(statusA > statusB){
+      comparison = 1
+    }else if(statusA < statusB){
+      comparison = -1
+    }
+    return comparison;
+    });
+    showTable(newSort)
+  });
+}
+
+// estimate time sort 
+function sortEsTime(data) {
+  esTime.addEventListener("click", () => {
+    var newSort = data.sort(function(a, b) {
+      return a.est.localeCompare(b.est, undefined, {
+        numeric: true,
+        sensitivity: 'base'
+      });
+    });
+    showTable(newSort)
+  });
+}
+
+// 3D Teach SORT 
+function sortTech(data){
+  tech.addEventListener("click", () => {
+    let newSort = data.sort((a, b) => {
+    const statusA = a.model.toUpperCase();
+    const statusB = b.model.toUpperCase();
+    let comparison = 0;
+    if(statusA > statusB){
+      comparison = 1
+    }else if(statusA < statusB){
+      comparison = -1
+    }
+    return comparison;
+    });
+    showTable(newSort)
+  });
 }
 
 // handling the pagination 
@@ -498,64 +564,42 @@ const search = document.getElementById("search");
 });
 
 // filter handler 
-const all = document.querySelector("[data-all]");
-const newFilter = document.querySelector("[data-new]");
-const processFilter = document.querySelector("[data-process]");
-const completeFilter = document.querySelector("[data-complete]");
-
-// all filter 
-all.addEventListener("click", () => {
-  state.querySet = tableData;
-  table();
-  console.log("Hello")
-});
-
-// new filter part 
-newFilter.addEventListener("click", (e) => {
-  const target = e.target;
-  filterElements("new", target);
-  filterElements("file", target);
-  filterElements("check", target);
-  table();
-});
-
-// processing filter 
-processFilter.addEventListener("click", (e) => {
-  const target = e.target;
-  filterElements("payment", target);
-  filterElements("printing", target);
-  filterElements("rePrinting", target);
-  table();
-});
-
-// completed filter 
-completeFilter.addEventListener("click", (e) => {
-  const target = e.target;
-  filterElements("completed", target);
-  filterElements("close", target);
-  filterElements("hidden", target);
-  table();
-});
-
-function filterElements(className, target){
-  if(target.classList.contains(className)){
-    const innerText = (target.innerText).toLowerCase();
-    state.querySet = state.querySet.filter((item) => (item.status).toLocaleLowerCase() === innerText);
-  }
-}
-
-// show table items 
+const filterBtn = document.querySelectorAll(".filterBtn");
 function table(){
   const data = pagination(state.querySet, state.page, state.row);
-  const tableInner = data.querySet.map((item) => {
-    const { status, ref, date, session, category, netID, name, est, model, link} = item;
+  paginationBtn(data.page);
+  showTable(data.querySet);
+  // filter function 
+  filterBtn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const filter = e.currentTarget.dataset.value;
+      let newFilter = state.querySet.filter((item) => item.status.toLowerCase() === filter);
+      if(filter === "all"){
+        showTable(data.querySet)
+      }else{
+        showTable(newFilter)
+      }
+    });
+  });
+}
+table();
+
+// show table items;
+function showTable(data){
+  dateSort(data);
+  sortStatus(data);
+  sortCategory(data);
+  sortEsTime(data);
+  sortTech(data);
+  const tableInner = data.map((item) => {
+    const { status, ref, date, session, category, netID, name, est, model, link } = item;
     return `
     <tr class="tableRow">
         <td data-label="status" style="text-transform : capitalize">${status}</td>
         <td data-label="ref">${ref}</td>
         <td data-label="date">${date}</td>
         <td data-label="session">${session}</td>
-        <td data-label="category">${category}</td>
+        <td data-label="category" class="category">${category}</td>
         <td data-label="netId">${netID}</td>
         <td data-label="name">${name}</td>
         <td data-label="time">${est}</td>
@@ -566,7 +610,5 @@ function table(){
     </tr>
     `
 });
-tableBody.innerHTML = (tableInner).join(" ");
-paginationBtn(data.page)
+  tableBody.innerHTML = (tableInner).join(" ");
 }
-table();

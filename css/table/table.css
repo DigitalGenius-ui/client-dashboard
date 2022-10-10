@@ -9,11 +9,15 @@
     box-shadow: 0px 0px 1px 0.2px grey;
 }
 
-.tableContainer .table .head{
+.tableContainer .table .sortBtn{
     cursor: pointer;
 }
 
-.tableContainer .table .head:hover{
+.tableContainer .table .category{
+    text-transform: capitalize !important;
+}
+
+.tableContainer .table .sortBtn:hover{
     background-color: rgba(0, 0, 0, 0.068);
 }
 

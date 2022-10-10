@@ -33,32 +33,29 @@
             <!-- filter part  -->
            <div class="filterContainer">
             <div class="ui menu filterFlex">
-              <button data-all class="allBtn">All</button>
               <div class="ui pointing dropdown item">
-                <span class="text">New</span>
+                <span class="text">All</span>
                 <i class="dropdown icon"></i>
                 <div class="menu" data-new>
-                  <div class="item new">New</div>
-                  <div class="item check">Checked</div>
-                  <div class="item file">File defects</div>
+                  <div class="item filterBtn" data-value="all">All</div>
+                  <div class="item filterBtn" data-value="new">New</div>
+                  <div class="item filterBtn" data-value="processing">Processing</div>
+                  <div class="item filterBtn" data-value="completed">Completed</div>
                 </div>
               </div>
               <div class="ui pointing dropdown item" data-process>
-                <span class="text">Processing</span>
+                <span class="text">All Matching</span>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                  <div class="item payment">Payment done</div>
-                  <div class="item printing">Printing</div>
-                  <div class="item rePrinting">Re-print</div>
-                </div>
-              </div>
-              <div class="ui pointing dropdown item" data-complete>
-                <span class="text">Completed</span>
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                  <div class="item completed">Completed</div>
-                  <div class="item close">Close</div>
-                  <div class="item hidden">Hidden</div>
+                  <div class="item filterBtn" data-value="new">New</div>
+                  <div class="item filterBtn" data-value="checked">Checked</div>
+	                <div class="item filterBtn" data-value="payment done">Payment Done</div>
+	                <div class="item filterBtn" data-value="printing">Printing</div>
+	                <div class="item filterBtn" data-value="completed">Completed</div>
+	                <div class="item filterBtn" data-value="close">Close</div>
+	                <div class="item filterBtn" data-value="file defects">File Defects</div>
+	                <div class="item filterBtn" data-value="re-print">Re-print</div>
+	                <div class="item filterBtn" data-value="hidden">Hidden</div>
                 </div>
               </div>
             </div>
@@ -73,15 +70,15 @@
               <table class="ui celled table unstackable">
               <thead>
                 <tr>
-                <th class="head">Status <i class="sort alphabet up icon"></i></th>
+                <th class="sortBtn status">Status <i class="sort alphabet up icon"></i></th>
                 <th>Ref.No</th>
-                <th>Date</th>
+                <th class="sortBtn tableDate">Date <i class="sort icon"></i></th>
                 <th>Session</th>
-                <th>Category</th>
+                <th class="sortBtn category">Category <i class="sort alphabet up icon"></i></th>
                 <th>NetID</th>
                 <th>Name</th>
-                <th>Est.Time</th>
-                <th>3d Tech.</th>
+                <th class="sortBtn esTime">Est.Time <i class="sort icon"></i></th>
+                <th class="sortBtn tech">3d Tech <i class="sort alphabet up icon"></i></th>
                 <th>File</th>
               </tr></thead>
               <tbody class="tableBody">
@@ -102,11 +99,13 @@
               </tbody>
             </table>
             </div>
+            <!-- table color buttons  -->
             <div class="colorBtn">
               <button class="ui tiny primary tertiary button">Blue</button>
               <button class="ui tiny olive tertiary button">Yellow</button>
               <button class="ui tiny grey tertiary button">Grey</button>
             </div>
+            <!-- table pagination  -->
             <div class="pagination">
               <div class="pagination-btn">
                 <!-- <button class="item back btn-disabled">Previous</button> -->
