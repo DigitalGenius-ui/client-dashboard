@@ -2,18 +2,6 @@ const tableBody = document.querySelector(".tableBody");
 
 const tableData = [
   {
-    status : "New",
-    ref : "20230102_1030_1",
-    date : "2022-01-05",
-    session : "1",
-    category : "Student",
-    netID : "gst220988",
-    name : "Chan Tin Man",
-    est : "14 hours",
-    model : "FDM",
-    link : "https://www.google.co.jp/"
-  },
-  {
     status : "Processing",
     ref : "20230102_1030_1",
     date : "2021-01-02",
@@ -34,18 +22,6 @@ const tableData = [
     netID : "gst220988",
     name : "Chan Tin Man",
     est : "32 hours",
-    model : "SLS",
-    link : "https://www.google.co.jp/"
-  },
-  {
-    status : "New",
-    ref : "20230102_1030_1",
-    date : "2023-01-02",
-    session : "1",
-    category : "Student",
-    netID : "gst220988",
-    name : "Chan Tin Man",
-    est : "38 hours",
     model : "SLS",
     link : "https://www.google.co.jp/"
   },
@@ -71,18 +47,6 @@ const tableData = [
     name : "Chan Tin Man",
     est : "17 hours",
     model : "SLA/FDM",
-    link : "https://www.google.co.jp/"
-  },
-  {
-    status : "New",
-    ref : "20230102_1030_1",
-    date : "2022-01-05",
-    session : "1",
-    category : "Teacher",
-    netID : "gst220988",
-    name : "Chan Tin Man",
-    est : "10 hours",
-    model : "FDM",
     link : "https://www.google.co.jp/"
   },
   {
@@ -388,16 +352,15 @@ const tableData = [
 ]
 
 // handling the sort 
-const sort = document.querySelector(".table .status");
+const statusSort = document.querySelector(".table .status");
 const tableDate = document.querySelector(".table .tableDate");
 const category = document.querySelector(".table .category");
 const esTime = document.querySelector(".table .esTime");
 const tech = document.querySelector(".table .tech");
 
 // status sort 
-function sortStatus(data) {
-  sort.addEventListener("click", () => {
-    let newSort = data.sort((a, b) => {
+  statusSort.addEventListener("click", () => {
+    state.querySet = state.querySet.sort((a, b) => {
     const statusA = a.status.toUpperCase();
     const statusB = b.status.toUpperCase();
     let comparison = 0;
@@ -408,26 +371,22 @@ function sortStatus(data) {
     }
     return comparison;
     });
-    showTable(newSort)
+    table();
   });
-}
 
 // date sort 
-function dateSort(data){
   tableDate.addEventListener("click", () => {
-    let newSort = data.sort(function(a,b){
+    state.querySet = state.querySet.sort(function(a,b){
       let c = new Date(a.date);
       let d = new Date(b.date);
       return d - c;
     });
-    showTable(newSort)
+    table();
   })
-}
 
 // category sort 
-function sortCategory(data) {
   category.addEventListener("click", () => {
-    let newSort = data.sort((a, b) => {
+    state.querySet = state.querySet.sort((a, b) => {
     const statusA = a.category.toUpperCase();
     const statusB = b.category.toUpperCase();
     let comparison = 0;
@@ -438,27 +397,23 @@ function sortCategory(data) {
     }
     return comparison;
     });
-    showTable(newSort)
+    table()
   });
-}
 
 // estimate time sort 
-function sortEsTime(data) {
   esTime.addEventListener("click", () => {
-    var newSort = data.sort(function(a, b) {
+    state.querySet = state.querySet.sort(function(a, b) {
       return a.est.localeCompare(b.est, undefined, {
         numeric: true,
         sensitivity: 'base'
       });
     });
-    showTable(newSort)
+    table();
   });
-}
 
 // 3D Teach SORT 
-function sortTech(data){
   tech.addEventListener("click", () => {
-    let newSort = data.sort((a, b) => {
+    state.querySet = state.querySet.sort((a, b) => {
     const statusA = a.model.toUpperCase();
     const statusB = b.model.toUpperCase();
     let comparison = 0;
@@ -469,9 +424,8 @@ function sortTech(data){
     }
     return comparison;
     });
-    showTable(newSort)
+   table();
   });
-}
 
 // handling the pagination 
 let state = {
@@ -569,6 +523,7 @@ function table(){
   const data = pagination(state.querySet, state.page, state.row);
   paginationBtn(data.page);
   showTable(data.querySet);
+  // console.log(data.querySet)
   // filter function 
   filterBtn.forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -586,11 +541,6 @@ table();
 
 // show table items;
 function showTable(data){
-  dateSort(data);
-  sortStatus(data);
-  sortCategory(data);
-  sortEsTime(data);
-  sortTech(data);
   const tableInner = data.map((item) => {
     const { status, ref, date, session, category, netID, name, est, model, link } = item;
     return `
