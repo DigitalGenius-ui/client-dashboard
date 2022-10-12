@@ -82,17 +82,15 @@ let content = `
     </ul>
     </div>
     <div class="dropDown">
+    <a href="./role.html">
     <div class="head">
       <div class="headIcon">
         <span class="ti-layers-alt menuIcon"></span>
-        <p>Role Control</p>
+        <h4>Role</h4>
       </div>
-        <span class="ti-angle-right arrow"></span>
     </div>
-    <ul class="drop">
-      <li><a class="link" href="./role.html">Role</a></li>
-    </ul>
     </div>
+    </a>
     <div class="dropDown">
     <div class="head">
       <div class="headIcon">

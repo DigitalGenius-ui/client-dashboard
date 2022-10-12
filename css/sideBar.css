@@ -85,7 +85,7 @@
     color: #fff;
 }
 
-.head.active h4{
+.head.active h4, .head.active a{
     font-weight: 700;
     color: #fff;
 }

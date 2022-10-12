@@ -21,7 +21,7 @@
       <div class="overFlow"></div>
         <!-- sideBar part 'dynamic'  -->
         <div class="left-side">
-            <div class="sideBar"></div>
+            <div class="sideBar" data-sidebar></div>
         </div>
         <div class="right-side">
             <div class="auth">
@@ -36,17 +36,17 @@
               <div class="ui pointing dropdown item">
                 <span class="text">All</span>
                 <i class="dropdown icon"></i>
-                <div class="menu" data-new>
-                  <div class="item filterBtn" data-value="all">All</div>
-                  <div class="item filterBtn" data-value="new">New</div>
-                  <div class="item filterBtn" data-value="processing">Processing</div>
-                  <div class="item filterBtn" data-value="completed">Completed</div>
+                <div class="menu" data-allDrop>
+                  <div class="item filterBtn dropFilter" data-value="all">All</div>
+                  <div class="item filterBtn dropFilter" data-value="new">New</div>
+                  <div class="item filterBtn dropFilter" data-value="processing">Processing</div>
+                  <div class="item filterBtn dropFilter" data-value="completed">Completed</div>
                 </div>
               </div>
               <div class="ui pointing dropdown item" data-process>
-                <span class="text">All Matching</span>
+                <span class="text match">All Matching</span>
                 <i class="dropdown icon"></i>
-                <div class="menu">
+                <div class="menu" data-match>
                   <div class="item filterBtn" data-value="new">New</div>
                   <div class="item filterBtn" data-value="checked">Checked</div>
 	                <div class="item filterBtn" data-value="payment done">Payment Done</div>
@@ -70,15 +70,15 @@
               <table class="ui celled table unstackable">
               <thead>
                 <tr>
-                <th class="sortBtn status">Status <i class="sort alphabet up icon"></i></th>
+                <th class="sortBtn" data-name="status" data-order="dec">Status <i class="sort icon"></i></th>
                 <th>Ref.No</th>
-                <th class="sortBtn tableDate">Date <i class="sort icon"></i></th>
+                <th class="sortBtn" data-name="date" data-order="dec">Date <i class="sort icon"></i></th>
                 <th>Session</th>
-                <th class="sortBtn category">Category <i class="sort alphabet up icon"></i></th>
+                <th class="sortBtn" data-name="category" data-order="dec">Category <i class="sort icon"></i></i></th>
                 <th>NetID</th>
                 <th>Name</th>
-                <th class="sortBtn esTime">Est.Time <i class="sort icon"></i></th>
-                <th class="sortBtn tech">3d Tech <i class="sort alphabet up icon"></i></th>
+                <th class="sortBtn" data-name="estime" data-order="dec">Est.Time <i class="sort icon"></i></th>
+                <th class="sortBtn" data-name="model" data-order="dec">3d Tech <i class="sort icon"></i></th>
                 <th>File</th>
               </tr></thead>
               <tbody class="tableBody">

@@ -2,7 +2,7 @@ const tableBody = document.querySelector(".tableBody");
 
 const tableData = [
   {
-    status : "Processing",
+    status : "printing",
     ref : "20230102_1030_1",
     date : "2021-01-02",
     session : "3",
@@ -50,7 +50,7 @@ const tableData = [
     link : "https://www.google.co.jp/"
   },
   {
-    status : "Processing",
+    status : "re-print",
     ref : "20230102_1030_1",
     date : "2019-01-02",
     session : "1",
@@ -170,7 +170,7 @@ const tableData = [
     link : "https://www.google.co.jp/"
   },
   {
-    status : "Processing",
+    status : "hidden",
     ref : "20230102_1030_1",
     date : "2021-01-02",
     session : "3",
@@ -242,7 +242,7 @@ const tableData = [
     link : "https://www.google.co.jp/"
   },
   {
-    status : "Processing",
+    status : "file defects",
     ref : "20230102_1030_1",
     date : "2025-01-02",
     session : "1",
@@ -352,80 +352,60 @@ const tableData = [
 ]
 
 // handling the sort 
-const statusSort = document.querySelector(".table .status");
-const tableDate = document.querySelector(".table .tableDate");
-const category = document.querySelector(".table .category");
-const esTime = document.querySelector(".table .esTime");
-const tech = document.querySelector(".table .tech");
+const tableHeaders = document.querySelectorAll("th");
 
-// status sort 
-  statusSort.addEventListener("click", () => {
-    state.querySet = state.querySet.sort((a, b) => {
-    const statusA = a.status.toUpperCase();
-    const statusB = b.status.toUpperCase();
-    let comparison = 0;
-    if(statusA > statusB){
-      comparison = 1
-    }else if(statusA < statusB){
-      comparison = -1
-    }
-    return comparison;
-    });
-    table();
-  });
-
-// date sort 
-  tableDate.addEventListener("click", () => {
-    state.querySet = state.querySet.sort(function(a,b){
-      let c = new Date(a.date);
-      let d = new Date(b.date);
-      return d - c;
-    });
-    table();
+tableHeaders.forEach((head) => {
+  head.addEventListener("click", (e) => {
+    let headName = e.target.dataset.name;
+    let headOrder = e.target.dataset.order;
+      if(headName === "estime"){
+        if(headOrder === "dec"){
+          e.target.dataset.order = "asc";
+          state.querySet = state.querySet.sort(function(a, b) {
+            return a.est.localeCompare(b.est, undefined, {
+              numeric: true,
+              sensitivity: 'base'
+            });
+          });
+        }else{
+          e.target.dataset.order = "dec";
+          state.querySet = state.querySet.sort(function(a, b) {
+            return b.est.localeCompare(a.est, undefined, {
+              numeric: true,
+              sensitivity: 'base'
+            });
+          });
+        }
+      }
+      if(headName === "status"){
+        sortTable(headOrder, headName, e);
+      }
+      if(headName === "category"){
+        sortTable(headOrder, headName, e)
+      }
+      if(headName === "date"){
+        sortTable(headOrder, headName, e)
+      }
+      if(headName === "model"){
+        sortTable(headOrder, headName, e)
+      }
+      table();
   })
+});
 
-// category sort 
-  category.addEventListener("click", () => {
-    state.querySet = state.querySet.sort((a, b) => {
-    const statusA = a.category.toUpperCase();
-    const statusB = b.category.toUpperCase();
-    let comparison = 0;
-    if(statusA > statusB){
-      comparison = 1
-    }else if(statusA < statusB){
-      comparison = -1
-    }
-    return comparison;
-    });
-    table()
-  });
-
-// estimate time sort 
-  esTime.addEventListener("click", () => {
-    state.querySet = state.querySet.sort(function(a, b) {
-      return a.est.localeCompare(b.est, undefined, {
-        numeric: true,
-        sensitivity: 'base'
-      });
-    });
-    table();
-  });
-
-// 3D Teach SORT 
-  tech.addEventListener("click", () => {
-    state.querySet = state.querySet.sort((a, b) => {
-    const statusA = a.model.toUpperCase();
-    const statusB = b.model.toUpperCase();
-    let comparison = 0;
-    if(statusA > statusB){
-      comparison = 1
-    }else if(statusA < statusB){
-      comparison = -1
-    }
-    return comparison;
-    });
-   table();
-  });
+function sortTable(headOrder, headName, e){
+  if(headOrder === "dec"){
+    e.target.dataset.order = "asc";
+    state.querySet = state.querySet.sort((a, b) => (
+      a[headName].toUpperCase() > b[headName].toUpperCase()
+      ));
+  }else{
+    e.target.dataset.order = "dec";
+    state.querySet = state.querySet.sort((a, b) => (
+      a[headName].toUpperCase() < b[headName].toUpperCase()
+    ));
+  }
+}
 
 // handling the pagination 
 let state = {
@@ -517,25 +497,89 @@ const search = document.getElementById("search");
     table();
 });
 
-// filter handler 
-const filterBtn = document.querySelectorAll(".filterBtn");
-function table(){
-  const data = pagination(state.querySet, state.page, state.row);
-  paginationBtn(data.page);
-  showTable(data.querySet);
-  // console.log(data.querySet)
-  // filter function 
+// filter handler;
+const dataMatch = document.querySelector("[data-match]");
+const allDrop = document.querySelector("[data-allDrop]");
+const matchHead = document.querySelector(".match");
+let valueArr = [
+  "New",
+  "Checked",
+  "Payment Done",
+  "Printing",
+  "Completed",
+  "Close",
+  "File Defects",
+  "Re-print",
+  "Hidden"
+];
+
+function filterDropdown(){
+  const dropFilter = document.querySelectorAll(".dropFilter");
+  dropFilter.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const filter = e.target.dataset.value;
+      if(filter === "all"){
+        let all = valueArr.map((item) => ( `
+          <div class="item filterBtn" data-value="${item}">${item}</div>
+        `
+      ));
+        dataMatch.innerHTML = all.join(" ");
+        matchHead.innerText = "All Matching";
+      }
+      if(filter === "new"){
+        let newFilter = `
+          <div class="item filterBtn" data-value="new">New</div>
+          <div class="item filterBtn" data-value="checked">Checked</div>
+          <div class="item filterBtn" data-value="file defects">file defects</div>
+        `
+        dataMatch.innerHTML = newFilter;
+        matchHead.innerText = "All Matching";
+      }
+      if(filter === "processing"){
+        let process = `
+          <div class="item filterBtn" data-value="Payment done">Payment done</div>
+          <div class="item filterBtn" data-value="Printing">Printing</div>
+          <div class="item filterBtn" data-value="Re-print">Re-print</div>
+        `
+        dataMatch.innerHTML = process;
+        matchHead.innerText = "All Matching";
+      }
+      if(filter === "completed"){
+        let completed = `
+          <div class="item filterBtn" data-value="completed">Completed</div>
+          <div class="item filterBtn" data-value="close">Close</div>
+          <div class="item filterBtn" data-value="hidden">Hidden</div>
+        `
+        dataMatch.innerHTML = completed;
+        matchHead.innerText = "All Matching";
+      }
+      table();
+    })
+  });
+}
+
+function newFilter(data){
+  const filterBtn = document.querySelectorAll(".filterBtn");
   filterBtn.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      const filter = e.currentTarget.dataset.value;
-      let newFilter = state.querySet.filter((item) => item.status.toLowerCase() === filter);
+      const filter = e.target.dataset.value;
+      let newFilter = state.querySet.filter((item) => item.status.toLowerCase() === filter.toLowerCase());
       if(filter === "all"){
         showTable(data.querySet)
       }else{
         showTable(newFilter)
       }
-    });
-  });
+    })
+  })
+}
+
+function table(){
+  const data = pagination(state.querySet, state.page, state.row);
+  paginationBtn(data.page);
+  showTable(data.querySet);
+  // filter function 
+  newFilter(data);
+  filterDropdown();
 }
 table();
 

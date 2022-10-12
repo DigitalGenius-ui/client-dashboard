@@ -64,6 +64,10 @@
     font-size: 0.8rem;
 }
 
+.tableContainer .table th i{
+    pointer-events: none;
+}
+
 .tableContainer .table td{
     font-size: 0.8rem;
 }
