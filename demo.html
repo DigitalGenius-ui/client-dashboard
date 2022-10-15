@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js" integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6UA9C6EVG18GHb/TrYpYCjyAQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<title>Filter Demo</title>
+</head>
+<body>
+<div id="status" class="ui selection dropdown">
+  <input type="hidden" name="status" id="currentSelectedStatus">
+  <i class="dropdown icon"></i>
+  <div class="default text">Default</div>
+  <div class="menu">
+    <div class="item" data-value="all">All</div>
+    <div class="item" data-value="new">New</div>
+	<div class="item" data-value="proc">Processing</div>
+	<div class="item" data-value="comp">Completed</div>
+  </div>
+</div>
+<div id="subfilter" class="ui selection dropdown">
+  <input type="hidden" name="subfilter">
+  <i class="dropdown icon"></i>
+  <div class="default text">All Matching</div>
+  <div class="menu">
+    <div class="item all new" data-value="0">New</div>
+    <div class="item all new" data-value="1">Checked</div>
+	<div class="item all proc" data-value="2">Payment Done</div>
+	<div class="item all proc" data-value="3">Printing</div>
+	<div class="item all comp" data-value="4">Completed</div>
+	<div class="item all comp" data-value="5">Close</div>
+	<div class="item all new" data-value="6">File Defects</div>
+	<div class="item all proc" data-value="7">Re-print</div>
+	<div class="item all comp" data-value="8">Hidden</div>
+  </div>
+</div>
+
+<script>
+//Initiate dropdown objects
+$(".ui.dropdown").dropdown();
+$("#currentSelectedStatus").on("change", function(){
+	let showSubFilter = $("#currentSelectedStatus").val();
+	$("#subfilter").find(".item").hide();
+	$("#subfilter").find("." + showSubFilter).show();
+});
+//Set the default value, timeout added for demo only
+setTimeout(function(){
+	$("#status").dropdown("set selected", "all");
+}, 300);
+</script>
+</body>
+</html>

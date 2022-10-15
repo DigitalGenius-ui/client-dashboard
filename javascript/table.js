@@ -1,4 +1,5 @@
 const tableBody = document.querySelector(".tableBody");
+const searchBar = document.getElementById("search")
 
 const tableData = [
   {
@@ -9,7 +10,7 @@ const tableData = [
     category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "32 hours",
+    est: 3000,
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -21,7 +22,7 @@ const tableData = [
     category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "32 hours",
+    est: 3500,
     model : "SLS",
     link : "https://www.google.co.jp/"
   },
@@ -33,7 +34,7 @@ const tableData = [
     category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "13 hours",
+    est: 300,
     model : "SLA",
     link : "https://www.google.co.jp/"
   },
@@ -45,7 +46,7 @@ const tableData = [
     category : "Staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "17 hours",
+    est: 500,
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -57,43 +58,20 @@ const tableData = [
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "7 hours",
+    est: 7000,
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
+
   {
-    status : "Completed",
-    ref : "20230102_1030_1",
-    date : "2019-01-02",
-    session : "1",
-    category : "Teacher",
-    netID : "gst220988",
-    name : "Chan Tin Man",
-    est : "15 hours",
-    model : "SLA 3D",
-    link : "https://www.google.co.jp/"
-  },
-  {
-    status : "Completed",
+    status : "new",
     ref : "20230102_1030_1",
     date : "2025-01-02",
     session : "1",
     category : "Staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "9 hours",
-    model : "FDM",
-    link : "https://www.google.co.jp/"
-  },
-  {
-    status : "New",
-    ref : "20230102_1030_1",
-    date : "2025-01-02",
-    session : "1",
-    category : "Staff",
-    netID : "gst220988",
-    name : "Chan Tin Man",
-    est : "9 hours",
+    est: 125000,
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -105,7 +83,7 @@ const tableData = [
     category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "3 hours",
+    est: 3300,
     model : "SLA",
     link : "https://www.google.co.jp/"
   },
@@ -117,7 +95,7 @@ const tableData = [
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "3 hours",
+    est: 3700,
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -129,7 +107,7 @@ const tableData = [
     category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "4 hours",
+    est: 860,
     model : "MJS",
     link : "https://www.google.co.jp/"
   },
@@ -141,7 +119,7 @@ const tableData = [
     category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "9 hours",
+    est: 12230,
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -153,19 +131,19 @@ const tableData = [
     category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "9 hours",
+    est: 1400,
     model : "FDM",
     link : "https://www.google.co.jp/"
   },
   {
-    status : "New",
+    status : "new",
     ref : "20230102_1030_1",
     date : "2021-01-02",
     session : "1",
     category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "5 hours",
+    est: 3800,
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -177,31 +155,19 @@ const tableData = [
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "8 hours",
+    est: 8500,
     model : "SLA",
     link : "https://www.google.co.jp/"
   },
   {
-    status : "Completed",
-    ref : "20230102_1030_1",
-    date : "2019-01-02",
-    session : "2",
-    category : "Student",
-    netID : "gst220988",
-    name : "Chan Tin Man",
-    est : "39 hours",
-    model : "SLA/FDM",
-    link : "https://www.google.co.jp/"
-  },
-  {
-    status : "New",
+    status : "new",
     ref : "20230102_1030_1",
     date : "2022-01-02",
     session : "1",
     category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "49 hours",
+    est: 38756,
     model : "SLS",
     link : "https://www.google.co.jp/"
   },
@@ -213,7 +179,7 @@ const tableData = [
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "17 hours",
+    est: 1267,
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -225,19 +191,19 @@ const tableData = [
     category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "18 hours",
+    est: 12473,
     model : "FDM 3D",
     link : "https://www.google.co.jp/"
   },
   {
-    status : "New",
+    status : "new",
     ref : "20230102_1030_1",
     date : "2024-01-02",
     session : "1",
     category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "13 hours",
+    est: 73376,
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -249,20 +215,8 @@ const tableData = [
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "29 hours",
+    est: 3477,
     model : "MJF",
-    link : "https://www.google.co.jp/"
-  },
-  {
-    status : "Completed",
-    ref : "20230102_1030_1",
-    date : "2025-01-02",
-    session : "1",
-    category : "teacher",
-    netID : "gst220988",
-    name : "Chan Tin Man",
-    est : "44 hours",
-    model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
   {
@@ -273,19 +227,19 @@ const tableData = [
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "33 hours",
+    est: 9568,
     model : "SLA",
     link : "https://www.google.co.jp/"
   },
   {
-    status : "New",
+    status : "new",
     ref : "20230102_1030_1",
     date : "2026-01-02",
     session : "1",
     category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "16 hours",
+    est: 2653,
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -297,7 +251,7 @@ const tableData = [
     category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "20 hours",
+    est: 7856,
     model : "FDM",
     link : "https://www.google.co.jp/"
   },
@@ -309,7 +263,7 @@ const tableData = [
     category : "staff",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "30 hours",
+    est: 12477,
     model : "SLA",
     link : "https://www.google.co.jp/"
   },
@@ -321,7 +275,7 @@ const tableData = [
     category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "10 hours",
+    est: 2357,
     model : "SLS",
     link : "https://www.google.co.jp/"
   },
@@ -333,7 +287,7 @@ const tableData = [
     category : "Student",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "45 hours",
+    est: 7345,
     model : "SLA/FDM",
     link : "https://www.google.co.jp/"
   },
@@ -345,264 +299,420 @@ const tableData = [
     category : "teacher",
     netID : "gst220988",
     name : "Chan Tin Man",
-    est : "25 hours",
+    est: 3000,
+    model : "MJF",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "new",
+    ref : "20230102_1030_1",
+    date : "2024-01-02",
+    session : "1",
+    category : "staff",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est: 73376,
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "file defects",
+    ref : "20230102_1030_1",
+    date : "2025-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est: 3477,
+    model : "MJF",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Completed",
+    ref : "20230102_1030_1",
+    date : "2025-01-02",
+    session : "1",
+    category : "teacher",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est: 2575,
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "Completed",
+    ref : "20230102_1030_1",
+    date : "2022-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est: 9568,
+    model : "SLA",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "new",
+    ref : "20230102_1030_1",
+    date : "2026-01-02",
+    session : "1",
+    category : "teacher",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est: 2653,
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "hidden",
+    ref : "20230102_1030_1",
+    date : "2023-01-02",
+    session : "1",
+    category : "staff",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est: 7856,
+    model : "FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "close",
+    ref : "20230102_1030_1",
+    date : "2015-01-02",
+    session : "1",
+    category : "staff",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est: 12477,
+    model : "SLA",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "re-print",
+    ref : "20230102_1030_1",
+    date : "2014-01-02",
+    session : "1",
+    category : "teacher",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est: 2357,
+    model : "SLS",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "printing",
+    ref : "20230102_1030_1",
+    date : "2015-01-02",
+    session : "1",
+    category : "Student",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est: 7345,
+    model : "SLA/FDM",
+    link : "https://www.google.co.jp/"
+  },
+  {
+    status : "payment done",
+    ref : "20230102_1030_1",
+    date : "2014-01-02",
+    session : "1",
+    category : "teacher",
+    netID : "gst220988",
+    name : "Chan Tin Man",
+    est: 3000,
     model : "MJF",
     link : "https://www.google.co.jp/"
   },
 ]
 
-// handling the sort 
-const tableHeaders = document.querySelectorAll("th");
+//Keep a record of each stage output
+let dataAfterFilter = [];
+let dataAfterSort = [];
+let pagedData = [];
 
-tableHeaders.forEach((head) => {
-  head.addEventListener("click", (e) => {
-    let headName = e.target.dataset.name;
-    let headOrder = e.target.dataset.order;
-      if(headName === "estime"){
-        if(headOrder === "dec"){
-          e.target.dataset.order = "asc";
-          state.querySet = state.querySet.sort(function(a, b) {
-            return a.est.localeCompare(b.est, undefined, {
-              numeric: true,
-              sensitivity: 'base'
-            });
-          });
-        }else{
-          e.target.dataset.order = "dec";
-          state.querySet = state.querySet.sort(function(a, b) {
-            return b.est.localeCompare(a.est, undefined, {
-              numeric: true,
-              sensitivity: 'base'
-            });
-          });
-        }
-      }
-      if(headName === "status"){
-        sortTable(headOrder, headName, e);
-      }
-      if(headName === "category"){
-        sortTable(headOrder, headName, e)
-      }
-      if(headName === "date"){
-        sortTable(headOrder, headName, e)
-      }
-      if(headName === "model"){
-        sortTable(headOrder, headName, e)
-      }
-      table();
-  })
-});
+//Global render configurations
+let itemPerPage = 7;
+let firstClassFilter = "all";
+let secondClassFilter = "";
+let sortBy = "status";
+let inverse = false;
+let pageNum = 0;
 
-function sortTable(headOrder, headName, e){
-  if(headOrder === "dec"){
-    e.target.dataset.order = "asc";
-    state.querySet = state.querySet.sort((a, b) => (
-      a[headName].toUpperCase() > b[headName].toUpperCase()
-      ));
+
+/*
+  Flow for generating table view
+
+  1. Reload data from global variable or backend
+  2(a). Apply first class filter
+  2(b). Apply second class filter (if needed)
+  3. Perform sort
+  4. Perform paging
+  5. Render table to page
+*/
+
+
+//Load data from server side
+function loadData(){
+  let data = tableData;
+  return data;
+}
+
+//Apply filter to the data
+function applyFilter(){
+  let renderingData = loadData();
+  let filteredData = [];
+  let matchingTags = [];
+  if (secondClassFilter == ""){
+    if (firstClassFilter == "new"){
+      matchingTags = ["new", "checked", "file defects"];
+    }else if (firstClassFilter == "processing"){
+      matchingTags = ["payment done", "printing", "re-print"];
+    }else if (firstClassFilter == "completed"){
+      matchingTags = ["completed", "close", "hidden"];
+    }else{
+      //all
+      matchingTags = ["new", "checked", "file defects", "payment done", "printing", "re-print", "completed", "close", "hidden"];
+    }
   }else{
-    e.target.dataset.order = "dec";
-    state.querySet = state.querySet.sort((a, b) => (
-      a[headName].toUpperCase() < b[headName].toUpperCase()
-    ));
+    matchingTags = [secondClassFilter];
   }
+
+  //filter all the data
+  renderingData.forEach(function(order){
+    if (matchingTags.includes(order.status.toLowerCase())){
+      filteredData.push(order);
+    }
+  });
+  
+  //Pass the filtered data to the next stage
+  dataAfterFilter = filteredData;
+  sortData();
 }
 
-// handling the pagination 
-let state = {
-  "querySet" : tableData,
-  "page" : 1,
-  "row" : 7,
-  "window" : 5
+//Sort the data according to selected header
+function sortData(){
+  let sortedData = dataAfterFilter;
+  sortedData.sort(function(a, b) {
+    var keyA = a[sortBy];
+    var keyB = b[sortBy];
+    
+    var multiplier = (inverse)?-1:1;
+    // Q1: why used * multiplier.
+    if (keyA < keyB) return -1 * multiplier;
+    if (keyA > keyB) return 1 * multiplier;
+    return 0;
+  });
+
+  dataAfterSort = sortedData;
+  renderToPagingList();
 }
 
-const pagination = (querySet, page, row) => {
-  const trimStart = (page - 1) * row;
-  const trimEnd = trimStart + row;
-
-  const trimData = querySet.slice(trimStart, trimEnd);
-  const pageNumber = Math.ceil(querySet.length / row);
-
-  return {
-    "querySet" : trimData,
-    "page" : pageNumber
+function renderToPagingList(){
+  pagedData = [];
+  let thisPage = [];
+  for (var i = 0; i < dataAfterSort.length; i++){
+    
+    if (i%itemPerPage == 0 && i > 0){
+      // console.log(i%itemPerPage, thisPage);
+      let thisPageCopy = JSON.parse(JSON.stringify(thisPage));
+      pagedData.push(thisPageCopy)
+      thisPage = [];
+    }
+    thisPage.push(dataAfterSort[i]);
   }
+  pagedData.push(thisPage);
+  renderTable(pageNum);
 }
 
-// pagination button 
-const paginationBtn = (pages) => {
-    // next and prev buttons 
-    let maxLeft = (state.page - Math.floor(state.window / 2));
-    let maxRight = (state.page + Math.floor(state.window / 2));
-  
-    if(maxLeft < 1) {
-      maxLeft = 1;
-      maxRight = state.window
+function renderTable(page){
+  if (page > pagedData.length -1){
+    page = pagedData.length - 1;
+  }
+  let renderingOrderList = pagedData[page];
+  $("#tableBody").html("");
+  renderingOrderList.forEach(orderObject => {
+    renderOrderToTable(orderObject);
+  });
+  paginationBtn(pagedData.length - 1);
+}
+
+// pagination buttons 
+function paginationBtn(pages) {
+  // next and prev buttons 
+  let maxLeft = (pageNum - Math.floor(itemPerPage / 2));
+  let maxRight = (pageNum + Math.floor(itemPerPage / 2));
+  if(maxLeft < 1) {
+    maxLeft = 1;
+    maxRight = itemPerPage;
+  }
+
+  if(maxRight > pages){
+    maxLeft = pages - (itemPerPage - 1);
+    if(maxLeft < 1){
+      maxLeft = 1
     }
-  
-    if(maxRight > pages){
-      maxLeft = pages - (state.window - 1);
-      if(maxLeft < 1){
-        maxLeft = 1
-      }
-      maxRight = pages
-    }
+    maxRight = pages
+  }
   const btnContainer = document.querySelector(".pagination-number");
   btnContainer.innerHTML = "";
   let activeClass;
   let startBtn;
   let lastBtn;
-
   for (let page = maxLeft; page <= maxRight; page++) {
-    if(page == state.page){
+    if(page == pageNum){
       activeClass = "active"
     }else{
       activeClass = ""
     }
 
-    if(page > 1){
+    if(page > 3){
       lastBtn = "active"
+    }else{
+      lastBtn = ""
     }
 
     if(page >= pages){
       startBtn = "active"
+    }else{
+      startBtn = ""
     }
     btnContainer.innerHTML +=`<button class="item page ${activeClass}" value=${page}>${page}</button>`;
   }
 
-  if (state.page != 1) {
+  if (itemPerPage != 1) {
     btnContainer.innerHTML = `<button value=${1} class="page item ${startBtn}">First</button>` + btnContainer.innerHTML;
   }
 
-  if (state.page != pages) {
+  if (itemPerPage != pages) {
     btnContainer.innerHTML += `<button value=${pages} class="page item ${lastBtn}">Last</button>`;
   }
-  const pageBtn = document.querySelectorAll(".page");
+  let pageBtn = document.querySelectorAll(".page");
   pageBtn.forEach(page => {
     page.addEventListener("click", (e) => {
-      const target = e.target.value;
-      state.page = +target;
-      table();
+      let target = e.target.value;
+      pageNum = +target;
+      renderToPagingList();
     });
   });
 }
 
-// search Handler 
-const search = document.getElementById("search");
-  search.addEventListener("input", (e) => {
-    const searchString = e.target.value
-    state.querySet = tableData.filter((item) => (
-      item.status.toLowerCase().includes(searchString) ||
-      item.name.toLowerCase().includes(searchString) 
-      ))
-    table();
-});
+//Helper function to convert seconds to human readable format
+function secondsToHms(d) {
+  d = Number(d);
+  var h = Math.floor(d / 3600);
+  var m = Math.floor(d % 3600 / 60);
+  var s = Math.floor(d % 3600 % 60);
 
-// filter handler;
-const dataMatch = document.querySelector("[data-match]");
-const allDrop = document.querySelector("[data-allDrop]");
-const matchHead = document.querySelector(".match");
-let valueArr = [
-  "New",
-  "Checked",
-  "Payment Done",
-  "Printing",
-  "Completed",
-  "Close",
-  "File Defects",
-  "Re-print",
-  "Hidden"
-];
-
-function filterDropdown(){
-  const dropFilter = document.querySelectorAll(".dropFilter");
-  dropFilter.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const filter = e.target.dataset.value;
-      if(filter === "all"){
-        let all = valueArr.map((item) => ( `
-          <div class="item filterBtn" data-value="${item}">${item}</div>
-        `
-      ));
-        dataMatch.innerHTML = all.join(" ");
-        matchHead.innerText = "All Matching";
-      }
-      if(filter === "new"){
-        let newFilter = `
-          <div class="item filterBtn" data-value="new">New</div>
-          <div class="item filterBtn" data-value="checked">Checked</div>
-          <div class="item filterBtn" data-value="file defects">file defects</div>
-        `
-        dataMatch.innerHTML = newFilter;
-        matchHead.innerText = "All Matching";
-      }
-      if(filter === "processing"){
-        let process = `
-          <div class="item filterBtn" data-value="Payment done">Payment done</div>
-          <div class="item filterBtn" data-value="Printing">Printing</div>
-          <div class="item filterBtn" data-value="Re-print">Re-print</div>
-        `
-        dataMatch.innerHTML = process;
-        matchHead.innerText = "All Matching";
-      }
-      if(filter === "completed"){
-        let completed = `
-          <div class="item filterBtn" data-value="completed">Completed</div>
-          <div class="item filterBtn" data-value="close">Close</div>
-          <div class="item filterBtn" data-value="hidden">Hidden</div>
-        `
-        dataMatch.innerHTML = completed;
-        matchHead.innerText = "All Matching";
-      }
-      table();
-    })
-  });
+  var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
+  var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
+  var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
+  return hDisplay + mDisplay + sDisplay; 
 }
 
-function newFilter(data){
-  const filterBtn = document.querySelectorAll(".filterBtn");
-  filterBtn.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const filter = e.target.dataset.value;
-      let newFilter = state.querySet.filter((item) => item.status.toLowerCase() === filter.toLowerCase());
-      if(filter === "all"){
-        showTable(data.querySet)
+//Render a job to table
+function renderOrderToTable(orderObject){
+  $("#tableBody").append(`<tr class="tableRow">
+    <td data-label="status" style="text-transform : capitalize" 
+    data-value=${orderObject.status}>${orderObject.status}</td>
+    <td data-label="ref">${orderObject.ref}</td>
+    <td data-label="date">${orderObject.date}</td>
+    <td data-label="session">${orderObject.session}</td>
+    <td data-label="category" class="category">${orderObject.category}</td>
+    <td data-label="netId">${orderObject.netID}</td>
+    <td data-label="name">${orderObject.name}</td>
+    <td data-label="time">${secondsToHms(orderObject.est)}</td>
+    <td data-label="tech">${orderObject.model}</td>
+    <td data-label="file">
+      <a href="${orderObject.link}" class="ti-link table-link"></a>
+    </td>
+  </tr>`);
+   //insert colors
+  let tableData = [...document.querySelectorAll("td")];
+  insertColor(tableData);
+}
+
+// insert Color function 
+function insertColor(data){
+  for (let item of data) {
+    if(item.dataset.label === "status"){
+      let text = item.innerText;
+      switch (text) {
+        case "New" :
+          item.className = "new";
+        break;
+        case "Checked" :
+          item.style.color = "grey"
+        break;
+        case "Hidden" :
+          item.style.color = "grey"
+        break;
+        case "Close" :
+          item.style.color = "#CC355F"
+        break;
+        case "File Defects" :
+          item.className = "new";
+        break;
+        case "Completed" : 
+        item.className = "completed";
+        break;
+        case "Payment Done" : 
+        item.className = "completed";
+        break;
+        case "Printing" : 
+        item.style.color = "#efcc00"
+        break;
+        case "Re-Print" : 
+        item.style.color = "#efcc00"
+        break;
+      }
+    }
+  }
+}
+
+//Bind user events
+document.querySelectorAll("th").forEach(head => {
+  head.addEventListener("click", (e) => {
+    let headName = e.target.dataset.name;
+    if (headName != undefined){
+      if (sortBy == headName){
+        //Already in that mode. Swap the sort sequence
+        inverse = !inverse;
       }else{
-        showTable(newFilter)
+        //Set this as the sorting mode
+        sortBy = headName;
+        inverse = false;
       }
-    })
-  })
-}
-
-function table(){
-  const data = pagination(state.querySet, state.page, state.row);
-  paginationBtn(data.page);
-  showTable(data.querySet);
-  // filter function 
-  newFilter(data);
-  filterDropdown();
-}
-table();
-
-// show table items;
-function showTable(data){
-  const tableInner = data.map((item) => {
-    const { status, ref, date, session, category, netID, name, est, model, link } = item;
-    return `
-    <tr class="tableRow">
-        <td data-label="status" style="text-transform : capitalize">${status}</td>
-        <td data-label="ref">${ref}</td>
-        <td data-label="date">${date}</td>
-        <td data-label="session">${session}</td>
-        <td data-label="category" class="category">${category}</td>
-        <td data-label="netId">${netID}</td>
-        <td data-label="name">${name}</td>
-        <td data-label="time">${est}</td>
-        <td data-label="tech">${model}</td>
-        <td data-label="file">
-          <a href="${link}" class="ti-link table-link"></a>
-        </td>
-    </tr>
-    `
+    }
+    sortData();
+  });
 });
-  tableBody.innerHTML = (tableInner).join(" ");
-}
+
+//Bind first class filter event
+$("#currentSelectedStatus").on("change", function(e){
+  //Update the status of the nextFilter
+  let value = $("#currentSelectedStatus").val();
+  $("#subfilter").find(".item").hide();
+  $("#subfilter").find("." + value).show();
+  $("#subfilter").dropdown("restore default text");
+
+  //Flush the table and load all matching items
+  firstClassFilter = value;
+  secondClassFilter = "";
+
+  //Update the rendering view
+  applyFilter();
+});
+
+//Bind second class filter event
+$("#nextFilter").on("change", function(e){
+  let value = e.currentTarget.value;
+  secondClassFilter = value;
+   //Update the rendering view
+  applyFilter();
+});
+
+// reload page
+let reload = document.querySelector(".reload");
+reload.addEventListener("click", () => {
+  document.location.reload()
+}) 

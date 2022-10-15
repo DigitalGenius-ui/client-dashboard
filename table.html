@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="./css/themify-icons.css">
     <!-- custom css  -->
     <link rel="stylesheet" href="./css/main.css">
-    <!-- custom js file  -->
-    <script src="./javascript/table.js" defer></script>
+    <!-- <script src="./javascript/tableTwo.js" defer></script> -->
     <title>Table</title>
 </head>
 <body>
@@ -32,42 +31,45 @@
           </div>
             <!-- filter part  -->
            <div class="filterContainer">
-            <div class="ui menu filterFlex">
-              <div class="ui pointing dropdown item">
-                <span class="text">All</span>
-                <i class="dropdown icon"></i>
-                <div class="menu" data-allDrop>
-                  <div class="item filterBtn dropFilter" data-value="all">All</div>
-                  <div class="item filterBtn dropFilter" data-value="new">New</div>
-                  <div class="item filterBtn dropFilter" data-value="processing">Processing</div>
-                  <div class="item filterBtn dropFilter" data-value="completed">Completed</div>
-                </div>
+            <div id="status" class="ui selection dropdown">
+              <input type="hidden" name="status" id="currentSelectedStatus">
+              <i class="dropdown icon"></i>
+              <div class="default text">Default</div>
+              <div class="menu">
+                <div class="item" data-value="all">All</div>
+                <div class="item" data-value="new">New</div>
+              <div class="item" data-value="proc">Processing</div>
+              <div class="item" data-value="comp">Completed</div>
               </div>
-              <div class="ui pointing dropdown item" data-process>
-                <span class="text match">All Matching</span>
-                <i class="dropdown icon"></i>
-                <div class="menu" data-match>
-                  <div class="item filterBtn" data-value="new">New</div>
-                  <div class="item filterBtn" data-value="checked">Checked</div>
-	                <div class="item filterBtn" data-value="payment done">Payment Done</div>
-	                <div class="item filterBtn" data-value="printing">Printing</div>
-	                <div class="item filterBtn" data-value="completed">Completed</div>
-	                <div class="item filterBtn" data-value="close">Close</div>
-	                <div class="item filterBtn" data-value="file defects">File Defects</div>
-	                <div class="item filterBtn" data-value="re-print">Re-print</div>
-	                <div class="item filterBtn" data-value="hidden">Hidden</div>
-                </div>
+            </div>
+            <div id="subfilter" class="ui selection dropdown">
+              <input type="hidden" name="subfilter" id="nextFilter">
+              <i class="dropdown icon"></i>
+              <div class="default text">All Matching</div>
+              <div class="menu">
+                <div class="item all new" data-value="new">New</div>
+                <div class="item all new" data-value="checked">Checked</div>
+                <div class="item all proc" data-value="payment done">Payment Done</div>
+                <div class="item all proc" data-value="printing">Printing</div>
+                <div class="item all comp" data-value="completed">Completed</div>
+                <div class="item all comp" data-value="close">Close</div>
+                <div class="item all new" data-value="file defects">File Defects</div>
+                <div class="item all proc" data-value="re-print">Re-print</div>
+                <div class="item all comp" data-value="hidden">Hidden</div>
               </div>
             </div>
            </div>
            <!-- table part  -->
            <div class="tableContainer">
             <div class="ui tiny fluid input search">
+              <div class="reloadBtn">
+                <button class="ui mini twitter button icon reload"><i class="redo icon"></i></button>
+              </div>
               <span>Search:</span>
               <input type="text" placeholder="search..." id="search">
             </div>
             <div class="table-overFlow">
-              <table class="ui celled table unstackable">
+              <table id="example" class="ui celled table unstackable">
               <thead>
                 <tr>
                 <th class="sortBtn" data-name="status" data-order="dec">Status <i class="sort icon"></i></th>
@@ -77,11 +79,11 @@
                 <th class="sortBtn" data-name="category" data-order="dec">Category <i class="sort icon"></i></i></th>
                 <th>NetID</th>
                 <th>Name</th>
-                <th class="sortBtn" data-name="estime" data-order="dec">Est.Time <i class="sort icon"></i></th>
+                <th class="sortBtn" data-name="est" data-order="dec">Est.Time <i class="sort icon"></i></th>
                 <th class="sortBtn" data-name="model" data-order="dec">3d Tech <i class="sort icon"></i></th>
                 <th>File</th>
               </tr></thead>
-              <tbody class="tableBody">
+              <tbody id="tableBody" class="tableBody">
                 <!-- <tr class="tableRow">
                   <td data-label="status">New</td>
                   <td data-label="ref">20230102_1030_1</td>
@@ -98,12 +100,6 @@
                 </tr> -->
               </tbody>
             </table>
-            </div>
-            <!-- table color buttons  -->
-            <div class="colorBtn">
-              <button class="ui tiny primary tertiary button">Blue</button>
-              <button class="ui tiny olive tertiary button">Yellow</button>
-              <button class="ui tiny grey tertiary button">Grey</button>
             </div>
             <!-- table pagination  -->
             <div class="pagination">
@@ -124,10 +120,11 @@
 
     <!-- .sideBar  -->
     <script src="./javascript/sideBar.js"></script>
+    <script src="./javascript/table.js"></script>
     <script>
-      $('.ui.dropdown')
-      .dropdown()
-      ;
+      $('.ui.dropdown').dropdown();
+      $("#currentSelectedStatus").parent().dropdown("set selected", "all");
+      loadData();
     </script>
 </body>
 </html>
